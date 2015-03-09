@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Clay Carpenter - Portfolio - Typ0</title>
+
+<link href="assets/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/project-style.css" rel="stylesheet" type="text/css" />
+
+<link href="js/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/thumbnailCreator.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+				var thumbnails = [ 'load-file', 'game-loaded',
+						'game-in-progress', 'game-over' ];
+				thumbnailCreator('typ0', thumbnails);
+			});
+</script>
+
+</head>
+
+<body>
+	<div class="topBar"></div>
+	<div class="topBarShadow"></div>
+	<div class="allContent">
+		<div class="titleBar">
+			<div class="name">Clay Carpenter</div>
+			<div class="navigationLinks">
+				<a href="index.html">portfolio</a> <a href="resume.html">resume</a>
+				<a href="contact.html">connect</a>
+			</div>
+		</div>
+		<div class="pageContent">
+			<div class="contentBox projectDetails">
+				<div>
+					<span class="projectTitle projectSection">Typ0</span> <span
+						class="projectText">Programmer-focused typing tutor that
+						makes a game out of practicing the syntax of the user's favorite
+						programming languages. Users upload source files, and then are
+						tested on a randomized set of lines, competing against the clock
+						to score the most points in the least amount of time. Bonus points
+						are awarded for more complex lines and completing the set of test
+						lines before time expires.</span>
+				</div>
+				<div>
+					<span class="projectSection">Technologies</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>JavaScript</li>
+							<li>jQuery</li>
+							<li>CSS3</li>
+							<li>Ant</li>
+							<li>Git (GitHub)</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">Contributions</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>Project founder and primary contributor</li>
+							<li>1400 lines of combined JavaScript, CSS, and HTML code</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">App Features</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>Uses new HTML5 file upload functionality to allow users
+								to test themselves against private files without uploading the
+								content to a public site.</li>
+							<li>Real-time highlighting of errors provides immediate
+								feedback on typing accuracy.</li>
+							<li>Test line randomization allows users to repeat the game
+								using the same lines of code from their source file, while also
+								randomizing the order of the test lines to provide fresh
+								challenge.</li>
+							<li>Throwback design mimics the look of early text-only
+								games.</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">Development Highlights</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>Relies on a custom publish-subscribe notification system
+								that facilitates loose coupling between the widgets and game
+								logic.</li>
+							<li>Uses the jQuery event handling and DOM manipulation
+								frameworks.</li>
+							<li>Ant build and deploy system.</li>
+							<li>Follows JavaScript best practices, such as:
+								<ul>
+									<li>Functionality is encapsulated in classes and
+										namespaces.</li>
+									<li>Object-oriented design with inheritance.</li>
+									<li>Singletons provide global access to application state
+										and publish-subscribe event bus.</li>
+								</ul>
+							</li>
+							<li>Before implementation was begun, iteration designs were
+								conceptualized through mockups.</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">Links</span> <span class="projectText"><ul
+							class="diamondGlyph">
+							<li><a class="standardLink"
+								href="http://typ0.pinguinotech.com/">The Typ0 Game</a></li>
+							<li><a class="standardLink"
+								href="https://github.com/claycarpenter/typ0">GitHub
+									project page</a></li>
+							<li><a class="standardLink"
+								href="https://www.ohloh.net/p/typ0">Ohloh project page</a></li>
+						</ul></span>
+				</div>
+			</div>
+			<div class="contentBox imageList" id="projectThumbnailContainer">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

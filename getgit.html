@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Clay Carpenter - Portfolio - GetGit</title>
+
+<link href="assets/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/project-style.css" rel="stylesheet" type="text/css" />
+
+<link href="js/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/thumbnailCreator.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+				var thumbnails = [ 'jquery-support-source',
+						'getgit-plugin-source', 'plugin-settings',
+						'getgit-wordpress-plugin-directory' ];
+				thumbnailCreator('getgit', thumbnails);
+			});
+</script>
+
+</head>
+
+<body>
+	<div class="topBar"></div>
+	<div class="topBarShadow"></div>
+	<div class="allContent">
+		<div class="titleBar">
+			<div class="name">Clay Carpenter</div>
+			<div class="navigationLinks">
+				<a href="index.html">portfolio</a> <a href="resume.html">resume</a>
+				<a href="contact.html">connect</a>
+			</div>
+		</div>
+		<div class="pageContent">
+			<div class="contentBox projectDetails">
+				<div>
+					<span class="projectTitle projectSection">GetGit</span> <span
+						class="projectText">Embeds syntax-highlighted GitHub repo
+						content into WordPress blog posts.</span>
+				</div>
+				<div>
+					<span class="projectSection">Technologies</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>PHP</li>
+							<li>JavaScript</li>
+							<li>WordPress Plugin Platform</li>
+							<li>Ant</li>
+							<li>Git (GitHub), SVN (WordPress Plugin Directory)</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">Contributions</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>Project founder and primary contributor</li>
+							<li>700 lines of code</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">App Features</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>Injects content from any public GitHub repository into
+								WordPress blog posts.</li>
+							<li>Allows for customization of plugin shortcode to prevent
+								conflicts with other installed plugins.</li>
+							<li>Provides caching support through the WordPress
+								Transients API.</li>
+							<li>Caching support is configurable, allowing site operators
+								to enabled caching for shortened page load times, or disable
+								caching to reduce the data store size.</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">Development Highlights</span> <span
+						class="projectText"><ul class="diamondGlyph">
+							<li>Thoroughly documented with both PHPDoc and inline
+								comments.</li>
+							<li>Integrates with the Sunlight JS syntax highlighter.</li>
+							<li>Ant build and deploy system.</li>
+							<li>Configurable debug logging.</li>
+							<li>Follows WordPress Plugin best practices, such as:
+								<ul>
+									<li>Functionality is encapsulated in classes to avoid
+										namespace conflicts.</li>
+									<li>External resources (JS, CSS) are declared through
+										WordPress API hooks.</li>
+									<li>User input is sanitized before being persisted.</li>
+								</ul>
+							</li>
+						</ul></span>
+				</div>
+				<div>
+					<span class="projectSection">Links</span> <span class="projectText"><ul
+							class="diamondGlyph">
+							<li><a class="standardLink"
+								href="http://wordpress.org/extend/plugins/getgit/">WordPress
+									Plugin Directory</a></li>
+							<li><a class="standardLink"
+								href="https://github.com/claycarpenter/github-wordpress-plugin">GitHub
+									project page</a></li>
+							<li><a class="standardLink"
+								href="https://www.ohloh.net/p/GetGit">Ohloh project page</a></li>
+						</ul></span>
+				</div>
+			</div>
+			<div class="contentBox imageList" id="projectThumbnailContainer">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

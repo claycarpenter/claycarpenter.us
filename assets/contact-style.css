@@ -1,0 +1,65 @@
+.contactContent {
+	width: 780px;
+}
+
+.contactText {
+	padding-top: 1px;
+}
+
+.contactSection {
+	font-family: 'trajanPro';
+	font-size: 13pt;
+	width: 100px;
+}
+
+.profile {
+	display: inline-block;
+	width: 125px;
+	text-align: center;
+}
+
+a.profileImageLink {
+	text-decoration: none;
+	border: 0 none;
+	display: inline-block;
+	width: 100px;
+	height: 120px;
+	text-align: center;
+}
+
+a.profileImageLink:hover span {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px dashed #aaa;
+}
+
+a.profileImageLink span {
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px dashed #ccc;
+	position: relative;
+	top: 95px;
+}
+
+a.profileImageLink:hover span {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #999;
+}
+
+a.profileImageLink#githubProfileLink {
+	background: url('images/github-grayscale-100x100.png') no-repeat 0 0;
+}
+
+a.profileImageLink#githubProfileLink:hover {
+	background: url('images/github-color-100x100.png') no-repeat 0 0;
+}
+
+a.profileImageLink#ohlohProfileLink {
+	margin-left: 30px;
+	background: url('images/ohloh-grayscale-100x100.png') no-repeat 0 0;
+}
+
+a.profileImageLink#ohlohProfileLink:hover {
+	background: url('images/ohloh-color-100x100.png') no-repeat 0 0;
+}

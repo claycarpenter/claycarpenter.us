@@ -1,0 +1,41 @@
+.resumeContentBox {
+	float: left;
+	width: 565px;
+	padding: 10px;
+}
+
+.tableOfContentsBox {
+	float: left;
+	margin-left: 610px;
+	width: 150px;
+	padding: 10px;
+	position: fixed;
+	top: 105px;
+}
+
+.section {
+	font-family: 'trajanPro';
+	font-size: 11pt;
+	display: block;
+	margin-top: 15px;
+}
+
+.subSection {
+	font-size: 10pt;
+	margin-top: 5px;
+}
+
+.subSection .date {
+	font-size: 9pt;
+	margin-left: 10px;
+	color: #666;
+}
+
+.title {
+	font-size: 16pt;
+	margin-top: 0px;
+}
+
+div.diamondSeparator {
+	text-align: center;
+}

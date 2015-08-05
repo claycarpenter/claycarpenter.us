@@ -1,0 +1,12 @@
+doctype html
+
+html
+    head
+        title #{file.title}
+        
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        
+        link(href="/styles/base.css", rel="stylesheet")
+    
+    body
+        .container!= file.contents

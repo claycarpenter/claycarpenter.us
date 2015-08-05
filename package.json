@@ -1,0 +1,29 @@
+{
+  "name": "claycarpenter.us",
+  "version": "2.0.1",
+  "description": "Repo for [claycarpenter.us](http://www.claycarpenter.us/).",
+  "private": true,
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/claycarpenter/claycarpenter.us"
+  },
+  "author": "Clay Carpenter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claycarpenter/claycarpenter.us/issues"
+  },
+  "homepage": "http://www.claycarpenter.us/",
+  "dependencies": {
+    "metalsmith": "^1.6.0",
+    "metalsmith-browser-sync": "git://github.com/claycarpenter/metalsmith-browser-sync",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-jade-templater": "git://github.com/claycarpenter/metalsmith-jade-templater",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-sass": "^0.7.0",
+    "yargs": "^3.8.0"
+  }
+}

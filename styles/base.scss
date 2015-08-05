@@ -1,0 +1,84 @@
+// Import fonts from Google Fonts.
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:600,300);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2rem;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 480px) {
+    font-size: 17px;
+  }
+}
+
+body {
+  @media only screen and (max-width: 480px) {
+    padding: .5rem;
+  }
+
+  @media only screen and (min-width: 480px) {
+    padding: 1.5rem;
+  }
+}
+
+* {
+  /* Reset box sizing. */
+
+  box-sizing: border-box;
+}
+
+.container {
+  @media only screen and (min-width: 480px) {
+    // At the current font size, this produces a roughly 600px-wide content
+    // box.
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway';
+  letter-spacing: 1px;
+}
+
+h1 {
+  line-height: 2.2rem;
+}
+
+h2 {
+  margin: 3rem 0 2rem 0;
+}
+
+.note {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+code,
+.code,
+pre {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: .9rem;
+  line-height: 1.5rem;
+  $code-bg-color: hsla(360, 15%, 97%, 1);
+  border: 1px solid darken($code-bg-color, 20%);
+  border-radius: .3rem;
+  padding: 1px 4px;
+  background-color: $code-bg-color;
+  overflow: auto;
+}
+
+pre code {
+  border: none;
+}

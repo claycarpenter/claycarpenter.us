@@ -1,0 +1,24 @@
+doctype html
+
+html
+    head
+        title #{title}
+        
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        
+        link(href="/styles/base.css", rel="stylesheet")
+    
+    body
+      section.hello
+        h2= hello.title
+        
+        each item in hello.content
+          h3= item.header
+          p= item.text
+      
+      section.online
+        each item in online.items
+          section.presence
+            h3= item.name
+            a(href=item.link.href, title=item.link.name)= item.link.name
+            p= item.blurb

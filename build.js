@@ -66,10 +66,11 @@ var metalsmith = Metalsmith(__dirname)
     ))
 
     // Primary pipeline processes - Markdown, Jade, and Sass transpilers
-    //.use(markdown())
-    //.use(spy())
+    // .use(markdown())
+    // .use(spy())
     .use(yamlToHtmlRenamer())
     .use(jadeTemplater(jadeTemplaterOptions))
+    // .use(spy())
     .use(sass({outputStyle: 'expanded'}))
 
     // Conditionally watch and serve with BrowserSync.
@@ -91,9 +92,9 @@ function spy () {
     Object.keys(files).forEach(function (fileKey) {
       var file = files[fileKey];
 
-      console.log(Object.keys(file));
+      // console.log(Object.keys(file));
       // console.log(JSON.stringify(file));
-
+      console.log(file.contents.toString());
     });
 
     done();

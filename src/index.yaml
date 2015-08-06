@@ -15,4 +15,43 @@ skills:
       - Front end web apps
       - Back end server solutions
       - Mobile apps for iOS and Android
+
+  - name: User Experience
+    icon:
+      imgSrc: /assets/images/icons/development.svg
+      alt: Development
+    topics:
+      - User research
+      - Content and feature planning
+      - Validation and user testing
+
+  - name: Design
+    icon:
+      imgSrc: /assets/images/icons/development.svg
+      alt: Development
+    topics:
+      - Responsive web design
+      - Mobile app interfaces
+      - Logo creation
+
+  - name: Write
+    icon:
+      imgSrc: /assets/images/icons/development.svg
+      alt: Development
+    topics:
+      - Technical documentation
+      - User guides
+      - How-Tos and tutorials
+
+showcase:
+  - name: Olympic Park Showcase
+    blurb: Lorem ipsum something something...
+    link:
+        href: /projects/olympic-park.html
+    photo:
+      imgSrc: /assets/images/home/showcase-olympic-park.jpg
+      alt: Olympic Park Showcase
+    icons:
+      - imgSrc: /assets/skill-icons/development-small-orange.jpg
+        alt: Development
 ---

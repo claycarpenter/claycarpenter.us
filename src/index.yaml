@@ -1,0 +1,18 @@
+---
+# Page Metadata
+title: Test Index
+template: /index.jade
+datePublished: "???"
+draft: false
+
+# Page Content
+skills:
+  - name: Development
+    icon:
+      imgSrc: /assets/images/icons/development.svg
+      alt: Development
+    topics:
+      - Front end web apps
+      - Back end server solutions
+      - Mobile apps for iOS and Android
+---

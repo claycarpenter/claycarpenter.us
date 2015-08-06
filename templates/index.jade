@@ -1,0 +1,18 @@
+doctype html
+
+html
+    head
+        title Title - #{file.title}
+        
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        
+        link(href="/styles/base.css", rel="stylesheet")
+    
+    body
+      ul
+        each skill in file.skills
+          li
+            h3 #{skill.name}
+            ul
+              each topic in skill.topics
+                li #{topic}

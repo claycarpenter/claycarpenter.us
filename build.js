@@ -38,7 +38,8 @@ var jadeTemplaterOptions = {
 var browserSyncOptions = {
     server: 'output',
     files: [
-        'src/**/*.md', // Posts
+        'src/**/*.md', // Markdown Posts
+        'src/**/*.yaml', // YAML Posts
         'templates/**/*.jade',   // Jade templates
         'src/**/*.scss' // Sass
     ],
@@ -66,7 +67,9 @@ var metalsmith = Metalsmith(__dirname)
     ))
 
     // Primary pipeline processes - Markdown, Jade, and Sass transpilers
-    .use(markdown())
+    //.use(markdown())
+    .use(spy())
+    .use(yamlToHtmlRenamer())
     .use(jadeTemplater(jadeTemplaterOptions))
     .use(sass({outputStyle: 'expanded'}))
 
@@ -81,6 +84,41 @@ metalsmith.build(function (err, files) {
 
     console.log('Build successful. Output files:', Object.keys(files));
 });
+
+function spy () {
+  return function (files, metalsmith, done) {
+    console.log(Object.keys(files));
+
+    Object.keys(files).forEach(function (fileKey) {
+      var file = files[fileKey];
+
+      console.log(Object.keys(file));
+      // console.log(JSON.stringify(file));
+
+    });
+
+    done();
+  }
+}
+
+function yamlToHtmlRenamer () {
+  return function (files, metalsmith, done) {
+
+    var basename = require('path').basename,
+        extname = require('path').extname;
+
+    Object.keys(files).forEach(function (file) {
+      var fileData = files[file];
+
+      var htmlName = basename(file, extname(file)) + '.html';
+
+      delete files[file];
+      files[htmlName] = fileData;
+    });
+
+    done();
+  };
+}
 
 function isDraftModeTest () {
     return !cliArgs.draft;

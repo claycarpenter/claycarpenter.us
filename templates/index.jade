@@ -11,11 +11,14 @@ html
     body
       section.hello
         h2= hello.title
+        
         p= hello.intro
         
       section.skills
+        h2= skills.title
+        
         ul
-          each skill in skills
+          each skill in skills.items
             li
               h3= skill.name
               ul
@@ -23,7 +26,13 @@ html
                   li #{topic}
 
       section.showcase
+        h2= showcases.title
+        
         ul
-          each showcase in showcases
+          each showcase in showcases.items
             li
               h3= showcase.name
+              
+              p= showcase.blurb
+              
+              a.button(href=showcase.link.href, title='Learn More') Learn More

@@ -31,8 +31,7 @@ var defaultArgValues = {
 var cliArgs = yargs.default(defaultArgValues).argv;
 
 var jadeTemplaterOptions = {
-    baseTemplatesDir: __dirname + '/templates',
-    fileDataKey: 'file'
+    baseTemplatesDir: __dirname + '/templates'
 };
 
 var browserSyncOptions = {
@@ -68,7 +67,7 @@ var metalsmith = Metalsmith(__dirname)
 
     // Primary pipeline processes - Markdown, Jade, and Sass transpilers
     //.use(markdown())
-    .use(spy())
+    //.use(spy())
     .use(yamlToHtmlRenamer())
     .use(jadeTemplater(jadeTemplaterOptions))
     .use(sass({outputStyle: 'expanded'}))

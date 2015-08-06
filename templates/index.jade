@@ -2,7 +2,7 @@ doctype html
 
 html
     head
-        title Title - #{file.title}
+        title Title - #{title}
         
         meta(name="viewport", content="width=device-width, initial-scale=1")
         
@@ -10,7 +10,7 @@ html
     
     body
       ul
-        each skill in file.skills
+        each skill in skills
           li
             h3 #{skill.name}
             ul

@@ -1,11 +1,15 @@
 ---
 # Page Metadata
-title: Test Index
+title: Portfolio of Clay Carpenter
 template: /index.jade
 datePublished: "???"
 draft: false
 
 # Page Content
+hello:
+  title: Hello, I'm Clay
+  intro: I'm a front end web developer with practice in user experience and interface design. I’m on a mission to help make people’s lives better. If you’re making great things for great people, I’d like to help.
+
 skills:
   - name: Development
     icon:
@@ -43,7 +47,7 @@ skills:
       - User guides
       - How-Tos and tutorials
 
-showcase:
+showcases:
   - name: Olympic Park Showcase
     blurb: Lorem ipsum something something...
     link:
@@ -54,4 +58,3 @@ showcase:
     icons:
       - imgSrc: /assets/skill-icons/development-small-orange.jpg
         alt: Development
----

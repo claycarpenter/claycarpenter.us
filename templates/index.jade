@@ -2,17 +2,28 @@ doctype html
 
 html
     head
-        title Title - #{title}
+        title #{title}
         
         meta(name="viewport", content="width=device-width, initial-scale=1")
         
         link(href="/styles/base.css", rel="stylesheet")
     
     body
-      ul
-        each skill in skills
-          li
-            h3 #{skill.name}
-            ul
-              each topic in skill.topics
-                li #{topic}
+      section.hello
+        h2= hello.title
+        p= hello.intro
+        
+      section.skills
+        ul
+          each skill in skills
+            li
+              h3= skill.name
+              ul
+                each topic in skill.topics
+                  li #{topic}
+
+      section.showcase
+        ul
+          each showcase in showcases
+            li
+              h3= showcase.name

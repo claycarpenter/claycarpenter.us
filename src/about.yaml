@@ -1,7 +1,7 @@
 ---
 # Page Metadata
 title: About
-# template: /index.jade
+template: /base.jade
 datePublished: "???"
 draft: false
 
@@ -13,7 +13,7 @@ hello:
       I’m a front end web developer on a mission to help make people’s lives better. Whether that’s through design, development, writing, or all of the above, I want to solve worthy problems that directly benefit users.
 
   - header: |
-    I build easy solutions to tough problems.
+      I build easy solutions to tough problems.
     text: |
       I know that as technology becomes more powerful it also becomes more complex, and my top priority is verifying that a project is on target and providing real value to users. That’s why I focus on user experience, performing research to better understand the target audience and user testing that guides us to the right solution. I believe a strong web or mobile project excels in three areas: user experience, design, and development. Practicing all three areas gives me the tools necessary to build simple, intuitive solutions to today’s tough problems.
 

@@ -1,0 +1,40 @@
+---
+# Page Metadata
+title: About
+# template: /index.jade
+datePublished: "???"
+draft: false
+
+# Page Content
+hello:
+  - header: |
+      Using technology to help people is what gets me out of bed every day.
+    text: |
+      I’m a front end web developer on a mission to help make people’s lives better. Whether that’s through design, development, writing, or all of the above, I want to solve worthy problems that directly benefit users.
+
+  - header: |
+    I build easy solutions to tough problems.
+    text: |
+      I know that as technology becomes more powerful it also becomes more complex, and my top priority is verifying that a project is on target and providing real value to users. That’s why I focus on user experience, performing research to better understand the target audience and user testing that guides us to the right solution. I believe a strong web or mobile project excels in three areas: user experience, design, and development. Practicing all three areas gives me the tools necessary to build simple, intuitive solutions to today’s tough problems.
+
+online:
+  - name: ClyCrpntr
+    link:
+      href: http://www.clycrpntr.com/
+      name: clycrpntr.com
+    blurb: |
+      My personal blog, where I write about random things that pique my geeky interest. I also keep a growing collection of snippets, short articles I’ve written to describe a single technique or code concept.
+
+  - name: GitHub
+    link:
+      href: https://www.github.com/claycarpenter
+      name: github.com/claycarpenter
+    blurb: |
+      I prefer to develop in the open, and I keep nearly all of my personal projects on GitHub. Checking out my profile page is a great way to peek into my latest development projects and see what’s keeping me busy these days.
+
+  - name: Dribbble
+    link:
+      href: https://www.dribble.com/claycarpenter
+      name: dribble.com/claycarpenter
+    blurb: |
+      I keep my Dribbble profile up to date with shots of my latest graphic design and illustration output. Take a look at the portfolio to see my more creative side.

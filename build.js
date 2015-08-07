@@ -6,6 +6,7 @@ var Metalsmith = require('metalsmith'),
     browserSync = require('metalsmith-browser-sync'),
     drafts = require('metalsmith-drafts'),
     sass = require('metalsmith-sass'),
+    static = require('metalsmith-static'),
     yargs = require('yargs');
 
 // Define default values for CLI arguments.
@@ -74,7 +75,12 @@ var metalsmith = Metalsmith(__dirname)
     .use(sass({outputStyle: 'expanded'}))
 
     // Conditionally watch and serve with BrowserSync.
-    .use(conditionalBrowserSync);
+    .use(conditionalBrowserSync)
+
+    .use(static({
+      src:'static',
+      dest:'.'
+    }));
 
 
 metalsmith.build(function (err, files) {

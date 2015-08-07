@@ -1,0 +1,72 @@
+doctype html
+
+-
+  var links = [
+    {
+      title: 'Home',
+      href: '/'
+    },    
+    {
+      title: 'Case Studies',
+      href: '/'
+    },
+    {
+      title: 'Projects',
+      href: '/'
+    },
+    {
+      title: 'About',
+      href: '/'
+    },
+    {
+      title: 'Contact',
+      href: '/'
+    }
+  ];
+
+mixin mainLinks(links)
+  ul
+    each link in links
+      li: a(href=link.href, title=link.title)= link.title
+
+html
+    head
+        title #{title}
+        
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        
+        link(href="/styles/base.css", rel="stylesheet")
+    
+    body
+      //- Header
+      header
+        +mainLinks(links)
+      
+      block hero
+      
+      main  
+        block content
+          p No content defined.
+
+      footer
+        //- Contact form
+        //- What is the proper markup for this contact form?
+        .contact
+          input(
+            type='text'
+            name='name'
+            placeholder='Name')
+          input(
+            type='text'
+            name='email'
+            placeholder='Email')
+            
+          input(
+            type='text'
+            name='name'
+            placeholder='Message')
+          
+          button Submit
+        
+        //- Footer links
+        +mainLinks(links)

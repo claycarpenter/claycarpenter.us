@@ -1,38 +1,30 @@
-doctype html
+extends /_layout.jade
 
-html
-    head
-        title #{title}
-        
-        meta(name="viewport", content="width=device-width, initial-scale=1")
-        
-        link(href="/styles/base.css", rel="stylesheet")
+block content
+  section.hello
+    h2= hello.title
     
-    body
-      section.hello
-        h2= hello.title
-        
-        p= hello.intro
-        
-      section.skills
-        h2= skills.title
-        
-        ul
-          each skill in skills.items
-            li
-              h3= skill.name
-              ul
-                each topic in skill.topics
-                  li #{topic}
+    p= hello.intro
+    
+  section.skills
+    h2= skills.title
+    
+    ul
+      each skill in skills.items
+        li
+          h3= skill.name
+          ul
+            each topic in skill.topics
+              li #{topic}
 
-      section.showcase
-        h2= showcases.title
-        
-        ul
-          each showcase in showcases.items
-            li
-              h3= showcase.name
-              
-              p= showcase.blurb
-              
-              a.button(href=showcase.link.href, title='Learn More') Learn More
+  section.showcase
+    h2= showcases.title
+    
+    ul
+      each showcase in showcases.items
+        li
+          h3= showcase.name
+          
+          p= showcase.blurb
+          
+          a.button(href=showcase.link.href, title='Learn More') Learn More

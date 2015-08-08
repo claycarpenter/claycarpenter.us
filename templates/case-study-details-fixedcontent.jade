@@ -1,0 +1,53 @@
+extends /_layout.jade
+
+block hero
+  .hero
+    img.hero-blurred(src=heroBgImage.imgSrc)
+    
+    h1 #{title}
+ 
+block content
+  p.back-nav
+    a(href='/caseStudies/list') Back to Case Studies
+  
+  section.links
+    
+  section.problem
+    h1 Problem
+    
+    p= problem.blurb
+    
+  section.solution
+    h1 Solution
+    
+    p= solution.blurb
+    
+  section.my-role
+    h1 My Role
+    
+    p= myRole.blurb
+    
+  section.process
+    h1 Process
+
+    each item in process.items
+      case item._type
+        when 'paragraph'
+          p= item._content
+        
+        when 'image'
+          img(
+            src=item._content.imgSrc
+            title=item._content.title
+          )
+        
+        when 'imageSet'
+          ul.image-set
+            each image in item._content.items
+              li: img(
+                src=image.imgSrc
+                title=image.title
+              )
+              
+        when 'dyn'
+          div !{ item.content }

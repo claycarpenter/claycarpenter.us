@@ -22,6 +22,7 @@
     "marked": "^0.3.5",
     "metalsmith": "^1.7.0",
     "metalsmith-browser-sync": "git://github.com/claycarpenter/metalsmith-browser-sync#active-check",
+    "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-jade-templater": "git://github.com/claycarpenter/metalsmith-jade-templater",
     "metalsmith-markdown": "^0.2.1",

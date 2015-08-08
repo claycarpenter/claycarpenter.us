@@ -7,6 +7,7 @@ var Metalsmith = require('metalsmith'),
     drafts = require('metalsmith-drafts'),
     sass = require('metalsmith-sass'),
     static = require('metalsmith-static'),
+    collections = require('metalsmith-collections'),
     dynContentConverter = require('./dyn-content-converter'),
     yargs = require('yargs');
 
@@ -67,10 +68,27 @@ var metalsmith = Metalsmith(__dirname)
         drafts()
     ))
 
-    // Primary pipeline processes - Markdown, Jade, and Sass transpilers
-    // .use(markdown())
-    // .use(spy())
     .use(yamlToHtmlRenamer())
+
+    // Capture HTML path.
+    .use(updatePaths())
+
+    .use(collectionsCleaner(['caseStudies', 'projects']))
+
+    .use(collections(
+    //   {
+    //   caseStudies: {
+    //     pattern: 'case-studies/*.html'
+    //   },
+    //   projects: {
+    //     pattern: 'projects/*.html'
+    //   }
+    // }
+    ))
+
+    .use(collectionsSpy())
+
+    .use(listPage)
 
     // Convert dynamic content.
     .use(dynContentConverter())
@@ -96,6 +114,38 @@ metalsmith.build(function (err, files) {
     console.log('Build successful. Output files:', Object.keys(files));
 });
 
+function collectionsCleaner (collectionsKeys) {
+  var keys;
+
+  collectionsKeys = collectionsKeys || [];
+  keys = typeof collectionsKeys === 'string' ? [collectionsKeys] : collectionsKeys;
+
+  return function (files, metalsmith, done) {
+    var metadata = metalsmith.metadata();
+
+    keys.forEach(function (key) {
+      delete metadata[key];
+    });
+
+    done();
+  };
+}
+
+function listPage (files, metalsmith, done) {
+  Object.keys(files).forEach(function (file) {
+    var listInfo = files[file].list;
+
+    if (listInfo && listInfo.key) {
+      console.log('collections list found');
+
+      listInfo.items = metalsmith.metadata()[listInfo.key];
+
+    }
+  });
+
+  done();
+}
+
 function spy () {
   return function (files, metalsmith, done) {
     console.log(Object.keys(files));
@@ -107,6 +157,19 @@ function spy () {
       // console.log(JSON.stringify(file));
       console.log(file.contents.toString());
     });
+
+    done();
+  }
+}
+
+function collectionsSpy () {
+  return function (files, metalsmith, done) {
+    var metadata = metalsmith.metadata();
+
+    console.log('Case Studies:', metadata.caseStudies.length);
+    console.log(metadata.caseStudies);
+    console.log('Projects:', metadata.projects.length);
+    console.log(metadata.projects);
 
     done();
   }
@@ -133,6 +196,16 @@ function yamlToHtmlRenamer () {
         files[htmlFilePath] = fileData;
         console.log('New key:', htmlFilePath);
       }
+    });
+
+    done();
+  };
+}
+
+function updatePaths () {
+  return function (files, metalsmith, done) {
+    Object.keys(files).forEach(function (fileKey) {
+      files[fileKey].path = fileKey;
     });
 
     done();

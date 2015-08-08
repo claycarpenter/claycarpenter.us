@@ -1,0 +1,13 @@
+---
+# Page Metadata
+title: Case Studies
+template: /case-study-index.jade
+datePublished: "???"
+draft: false
+
+list:
+  key: caseStudies
+
+# Page Content
+
+# Stop cutting my file short

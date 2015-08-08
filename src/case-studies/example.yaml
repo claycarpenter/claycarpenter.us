@@ -4,8 +4,24 @@ title: Olympic National Park Camping Showcase
 template: /case-study-details.jade
 datePublished: "???"
 draft: false
+collection: caseStudies
 
 # Page Content
+listImage:
+  imgSrc: /images/projects/olympic-park-showcase-list.jpg
+
+intro:
+  blurb: |
+    Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
+
+skillIcons:
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+
 heroBgImage:
   imgSrc: /images/case-studies/olympic-park/hero-blurred.jpg
 

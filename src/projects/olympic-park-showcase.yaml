@@ -4,8 +4,20 @@ title: Olympic National Park Camping Showcase
 template: /project-details.jade
 datePublished: "???"
 draft: false
+collection: projects
 
 # Page Content
+
+listImage:
+  imgSrc: /images/projects/olympic-park-showcase-list.jpg
+
+skillIcons:
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
 
 projectLinks:
   items:

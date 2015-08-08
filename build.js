@@ -113,18 +113,26 @@ function spy () {
 }
 
 function yamlToHtmlRenamer () {
+  var yamlSearchRegex = /\.yaml$/;
+
   return function (files, metalsmith, done) {
 
     var basename = require('path').basename,
         extname = require('path').extname;
 
     Object.keys(files).forEach(function (file) {
-      var fileData = files[file];
+      console.log('Existing key:', file);
 
-      var htmlName = basename(file, extname(file)) + '.html';
 
-      delete files[file];
-      files[htmlName] = fileData;
+      if (yamlSearchRegex.test(file)) {
+        var htmlFilePath = file.replace(yamlSearchRegex, '.html');
+
+        var fileData = files[file];
+
+        delete files[file];
+        files[htmlFilePath] = fileData;
+        console.log('New key:', htmlFilePath);
+      }
     });
 
     done();

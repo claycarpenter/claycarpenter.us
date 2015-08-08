@@ -7,6 +7,7 @@ var Metalsmith = require('metalsmith'),
     drafts = require('metalsmith-drafts'),
     sass = require('metalsmith-sass'),
     static = require('metalsmith-static'),
+    dynContentConverter = require('./dyn-content-converter'),
     yargs = require('yargs');
 
 // Define default values for CLI arguments.
@@ -70,6 +71,10 @@ var metalsmith = Metalsmith(__dirname)
     // .use(markdown())
     // .use(spy())
     .use(yamlToHtmlRenamer())
+
+    // Convert dynamic content.
+    .use(dynContentConverter())
+
     .use(jadeTemplater(jadeTemplaterOptions))
     // .use(spy())
     .use(sass({outputStyle: 'expanded'}))

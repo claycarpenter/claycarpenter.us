@@ -8,9 +8,16 @@ block hero
  
 block content
   p.back-nav
-    a(href='/caseStudies/list') Back to Case Studies
-  
+    a(href='/case-studies/list') Back to Case Studies
+    
   section.links
+    ul.project-links
+      each link in projectLinks.items
+        li
+          a.button(
+            href=link.href
+            title=link.name
+          )= link.name
     
   section.problem
     h1 Problem

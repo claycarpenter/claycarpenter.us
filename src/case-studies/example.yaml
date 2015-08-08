@@ -9,10 +9,10 @@ draft: false
 heroBgImage:
   imgSrc: /images/case-studies/olympic-park/hero-blurred.jpg
 
-links:
+projectLinks:
   items:
     - name: Gallery
-      href: #gallery
+      href: '#gallery'
 
     - name: View Live
       href: http://claycarpenter.github.io/olympic-park/

@@ -3,6 +3,13 @@ var marked = require('marked'),
     jade = require('jade');
 
 module.exports = function () {
+  // Ignored properties are a simplistic hack to prevent
+  // circular reference-based errors.
+  var ignoredProperties = [
+    'previous',
+    'next'
+  ];
+
   function find(object, matches) {
     // Quit quickly if object isn't an object.
     if (typeof object !== 'object') return;
@@ -12,7 +19,10 @@ module.exports = function () {
     }
 
     Object.keys(object).forEach(function (key) {
-      if (object.hasOwnProperty(key)) {
+      if (
+        object.hasOwnProperty(key) &&
+        ignoredProperties.indexOf(key) < 0
+        ) {
         var value = object[key];
 
         if (value instanceof Array) {
@@ -52,7 +62,7 @@ module.exports = function () {
 
               var template = jade.compile(item._content);
               item.content = template(fileData);
-              
+
               console.log('Compiled:', item.content);
 
             break;

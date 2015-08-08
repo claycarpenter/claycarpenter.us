@@ -1,0 +1,57 @@
+extends /_short-hero.jade
+ 
+block content
+  p.back-nav
+    a(href='/projects/list') Back to Projects
+  
+  section.links
+    ul.project-links
+      each link in projectLinks.items
+        li
+          a.button(
+            href=link.href
+            title=link.name
+          )= link.name
+    
+  section.intro
+    h1 Intro
+    
+    p= intro.blurb
+    
+  section.solution
+    h1 Tools & Techniques
+    
+    //- Iterate over categories, then list items
+    ul
+      each category in toolsAndTechniques.categories
+        li
+          .category-name= category.name
+          .category-skills
+            ul
+              each skill, index in category.skills                
+                li= skill.name + (index === category.skills.length - 1 ? '' : ',')
+    
+  section.details
+    h1 Details
+
+    each item in details.items
+      case item._type
+        when 'paragraph'
+          p= item._content
+        
+        when 'image'
+          img(
+            src=item._content.imgSrc
+            title=item._content.title
+          )
+        
+        when 'imageSet'
+          ul.image-set
+            each image in item._content.items
+              li: img(
+                src=image.imgSrc
+                title=image.title
+              )
+              
+        when 'dyn'
+          div !{ item.content }

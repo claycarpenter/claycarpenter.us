@@ -1,0 +1,73 @@
+---
+# Page Metadata
+title: Olympic National Park Camping Showcase
+template: /case-study-details-dyncontent.jade
+datePublished: "???"
+draft: false
+
+# Page Content
+heroBgImage:
+  imgSrc: /images/case-studies/olympic-park/hero-blurred.jpg
+
+links:
+  items:
+    - name: Gallery
+      href: #gallery
+
+    - name: View Live
+      href: http://claycarpenter.github.io/olympic-park/
+
+    - name: GitHub
+      href: http://github.com/claycarpenter/olympic-park/
+
+problem:
+  blurb: |
+    Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
+
+solution:
+  blurb: |
+    Micro-finance; political Peace Corps carbon rights, indicator, collaborative consumption grantees honesty effect technology medical. Kickstarter pursue these aspirations local clean water Andrew Carnegie experience in the field outcomes tackle equal opportunity.
+
+myRole:
+  blurb: |
+    Informal economies Global South Arab Spring enable marginalized communities. Donors, investment global network advocate employment; inclusive capitalism best practices.
+
+process:
+  # How does markup fit in here? Just have to write it out? Otherwise,
+  # it's hard to add inline links, etc...
+  items:
+    # Plaintext renders within `p` tag
+    - _type: plaintext
+      _content: |
+        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+
+    # Jade, identical to above example
+    - _type: jade
+      _content: |
+        p Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+
+    # Plain content is wrapped in `p`; equivalent to plaintext
+    # ...is this actually possible? Without a lot of work?
+    - content: |
+        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+
+    # Markdown, identical to above example
+    - _type: markdown
+      _content: |
+        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+
+    # Jade, image
+    - _type: jade
+      _content: |
+        img(src='/images/wherever/blah.jpg', title='An image')
+
+    # Jade, images
+    - _type: jade
+      _content: |
+        ul
+          li: img(src='/images/wherever/blah.jpg', title='An image')
+          li: img(src='/images/wherever/blah.jpg', title='An image')
+          li: img(src='/images/wherever/blah.jpg', title='An image')
+
+
+# Stop cutting my file short

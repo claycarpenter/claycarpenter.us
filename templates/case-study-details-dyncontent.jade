@@ -1,0 +1,31 @@
+extends /_layout.jade
+
+block hero
+  .hero
+    img.hero-blurred(src=heroBgImage.imgSrc)
+    
+    h1 #{title}
+ 
+block content
+  p.back-nav
+    a(href='/caseStudies/list') Back to Case Studies
+  
+  section.links
+    
+  section.problem
+    h1 Problem
+    
+    p= problem.blurb
+    
+  section.solution
+    h1 Solution
+    
+    p= solution.blurb
+    
+  section.my-role
+    h1 My Role
+    
+    p= myRole.blurb
+    
+  section.process
+    h1 Process

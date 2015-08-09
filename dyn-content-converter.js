@@ -52,35 +52,35 @@ module.exports = function () {
       console.log(matches.length, 'matches in file', file, '\n');
 
       // Print matches
-      if (matches.length) console.log(matches);
+      // if (matches.length) console.log(matches);
 
       matches.forEach(function (item) {
         switch (item._lang.toLowerCase()) {
           case 'jade':
-              console.log('Converting Jade');
-              console.log('Source:', item._content);
+              // console.log('Converting Jade');
+              // console.log('Source:', item._content);
 
               var template = jade.compile(item._content);
               item.content = template(fileData);
 
-              console.log('Compiled:', item.content);
+              // console.log('Compiled:', item.content);
 
             break;
 
           case 'markdown':
-              console.log('Converting Markdown');
-              console.log('Source:', item._content);
+              // console.log('Converting Markdown');
+              // console.log('Source:', item._content);
 
               item.content = marked(item._content);
-              console.log('Compiled:', item.content);
+              // console.log('Compiled:', item.content);
             break;
 
           case 'plaintext':
-              console.log('Converting plaintext');
-              console.log('Source:', item._content);
+              // console.log('Converting plaintext');
+              // console.log('Source:', item._content);
 
               item.content = '<p>' + item._content + '</p>';
-              console.log('Compiled:', item.content);
+              // console.log('Compiled:', item.content);
 
             break;
 

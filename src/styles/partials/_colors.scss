@@ -2,10 +2,42 @@
   Colors
 */
 
-$dark-green: #3D4002;
-$med-green: #555903;
-$light-green: #858C04;
+// Define commonly used colors.
+// All colors are fully opaque; adjust transparency
+// as needed when referenced/used.
+$white: hsla(0, 0, 100, 1);
+$black: hsla(0, 0, 0, 1);
 
-$tan: #E8E7D3;
+$light-gray: hsla(0, 0, 93, 1);
 
-$orange: #BF7806;
+$dark-blue: hsla(212, 49, 21, 1);
+
+.theme-a {
+  /*
+    BG:   Dark blue
+    Font: Light gray
+  */
+
+  color: $light-gray;
+  background-color: rgba($dark-blue, .60);
+}
+
+.theme-b {
+  /*
+    BG:   Light gray
+    Font: Dark blue
+  */
+
+  color: $dark-blue;
+  background-color: rgba($white, .45);
+}
+
+.theme-c {
+  /*
+    BG:   Dark gray
+    Font: Light gray
+  */
+
+  color: $light-gray;
+  background-color: rgba($black, .40);
+}

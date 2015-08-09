@@ -1,7 +1,7 @@
 extends /_layout.jade
 
 block hero
-  .hero
+  .hero.theme-a
     h1 Coding #[span /] Designing
     
     p
@@ -9,12 +9,12 @@ block hero
       | mobile and web experiences
 
 block content
-  section.hello
+  section.hello.theme-b
     h2= hello.title
     
     p= hello.intro
     
-  section.skills
+  section.skills.theme-c
     h2= skills.title
     
     ul
@@ -25,7 +25,7 @@ block content
             each topic in skill.topics
               li #{topic}
 
-  section.showcase
+  section.showcase.theme-a
     h2= showcases.title
     
     ul

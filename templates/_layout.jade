@@ -42,36 +42,39 @@ html
         link(href="/styles/style.css", rel="stylesheet")
     
     body
-      //- Header
-      header.theme-a
-        +navBar(links)
-      
-      block hero
-      
-      main  
-        block content
-          p No content defined.
-
-      footer.theme-a
-        //- Contact form
-        //- What is the proper markup for this contact form?
-        .contact
-          input(
-            type='text'
-            name='name'
-            placeholder='Name')
-            
-          input(
-            type='text'
-            name='email'
-            placeholder='Email')
-            
-          input(
-            type='text'
-            name='name'
-            placeholder='Message')
-          
-          button Submit
+      //- Contains all page content, other than background
+      .center-content
         
-        //- Footer links
-        +navBar(links)
+        //- Header
+        header.theme-a
+          +navBar(links)
+        
+        block hero
+        
+        main  
+          block content
+            p No content defined.
+
+        footer.theme-a
+          //- Contact form
+          //- What is the proper markup for this contact form?
+          .contact
+            input(
+              type='text'
+              name='name'
+              placeholder='Name')
+              
+            input(
+              type='text'
+              name='email'
+              placeholder='Email')
+              
+            input(
+              type='text'
+              name='name'
+              placeholder='Message')
+            
+            button Submit
+          
+          //- Footer links
+          +navBar(links)

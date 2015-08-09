@@ -1,0 +1,27 @@
+@mixin respond-to($media, $isSpecific: false) {
+  // Create min width
+  @if $media == small {
+    $min-width: 0;
+    $max-width: $break-sm;
+  }
+  @else if $media == medium {
+    $min-width: $break-sm + 1px;
+    $max-width: $break-lg - 1px;
+  }
+  @else if $media == large {
+    $min-width: $break-lg;
+    $max-width: 9999px;
+  }
+
+  // If isSpecific, set max width query
+  $max-width-query: "";
+  @if $isSpecific {
+    $max-width-query: "and (max-width: #{$max-width})";
+  }
+
+  // Use generic form of media query
+  $query: "only screen and (min-width: #{$min-width}) #{$max-width-query}";
+  @media #{$query} {
+    @content;
+  }
+}

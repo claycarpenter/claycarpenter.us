@@ -1,0 +1,43 @@
+/*
+  Fonts
+*/
+
+// Import Roboto from Google Web Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic);
+
+// Canter Bold
+@font-face {
+  font-family: "CanterBold";
+  src: url("../fonts/Canter_Bold.woff");
+}
+
+// Canter Bold Stripes
+@font-face {
+  font-family: "CanterBoldStripes";
+  src: url("../fonts/Canter_Bold_Stripes.woff");
+}
+
+// Center Bold 3D
+@font-face {
+  font-family: "CanterBold3D";
+  src: url("../fonts/Canter_Bold_3D.woff");
+}
+
+/*
+  Text styles
+*/
+
+.header-stripes {
+  font-family: "CanterBoldStripes";
+  color: rgba($tan, 0.6);
+}
+
+.overlay-text-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  .header {
+    text-align: center;
+  }
+}

@@ -1,0 +1,52 @@
+/*
+  Basic grid foundation.
+*/
+
+.container {
+  width: auto;
+  margin: 0 auto;
+}
+
+.container:after,
+.row:after {
+  // Float container fix.
+  content: "";
+  display: table;
+  clear: both;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+@mixin padded-box {
+  float: left;
+  padding: 0 1%;
+}
+
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+      @include padded-box;
+      width: ($i / 12) * 100%;
+  }
+}
+
+@media only screen and (min-width: $break-md) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+        @include padded-box;
+        width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: $break-lg) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+        @include padded-box;
+        width: ($i / 12) * 100%;
+    }
+  }
+}

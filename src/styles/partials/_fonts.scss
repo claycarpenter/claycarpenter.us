@@ -3,26 +3,62 @@
 */
 
 // Import Roboto from Google Web Fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic);
 
-// Canter Bold
+// Bebas Neue Book
 @font-face {
-  font-family: "CanterBold";
-  src: url("../fonts/Canter_Bold.woff");
+  font-family: "BebasBook";
+  src: url("../fonts/BebasNeue-Book.woff");
 }
 
-// Canter Bold Stripes
+// Bebas Neue Regular
 @font-face {
-  font-family: "CanterBoldStripes";
-  src: url("../fonts/Canter_Bold_Stripes.woff");
-}
-
-// Center Bold 3D
-@font-face {
-  font-family: "CanterBold3D";
-  src: url("../fonts/Canter_Bold_3D.woff");
+  font-family: "BebasRegular";
+  src: url("../fonts/BebasNeue-Regular.woff");
 }
 
 /*
   Text styles
 */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "BebasBook";
+}
+
+h1 {
+  font-size: 90px;
+  letter-spacing: 15px;
+  color: $white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 44px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+
+h2.light,
+h3.light,
+h4.light,
+h5.light {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+h3.light {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}

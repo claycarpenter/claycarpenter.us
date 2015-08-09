@@ -2,7 +2,7 @@ extends /_layout.jade
 
 block hero
   .hero.theme-a
-    h1 Coding #[span /] Designing
+    h1 Coding#[span /]Designing
     
     p
       span.rotator elegant
@@ -20,7 +20,7 @@ block content
     ul
       each skill in skills.items
         li
-          h3= skill.name
+          h3.light= skill.name
           ul
             each topic in skill.topics
               li #{topic}
@@ -31,7 +31,7 @@ block content
     ul
       each showcase in showcases.items
         li
-          h3= showcase.name
+          h3.light= showcase.name
           
           p= showcase.blurb
           

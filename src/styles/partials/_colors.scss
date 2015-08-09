@@ -11,6 +11,9 @@ $black: hsla(0, 0, 0, 1);
 $light-gray: hsla(0, 0, 93, 1);
 
 $dark-blue: hsla(212, 49, 21, 1);
+$med-blue: hsla(212, 49, 50, 1);
+
+$med-orange: hsla(36, 100, 50, 1);
 
 .theme-a {
   /*
@@ -20,6 +23,15 @@ $dark-blue: hsla(212, 49, 21, 1);
 
   color: $light-gray;
   background-color: rgba($dark-blue, .60);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $med-orange;
+  }
 }
 
 .theme-b {
@@ -30,6 +42,15 @@ $dark-blue: hsla(212, 49, 21, 1);
 
   color: $dark-blue;
   background-color: rgba($white, .45);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $med-blue;
+  }
 }
 
 .theme-c {
@@ -40,4 +61,13 @@ $dark-blue: hsla(212, 49, 21, 1);
 
   color: $light-gray;
   background-color: rgba($black, .40);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $med-orange;
+  }
 }

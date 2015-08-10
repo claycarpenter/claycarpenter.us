@@ -48,6 +48,18 @@
   .col-#{$size}-offset-#{$col} {
     margin-left: ($col / 12) * 100%;
   }
+
+  .col-#{$size}-offset-right-#{$col} {
+    margin-right: ($col / 12) * 100%;
+  }
+
+  .col-#{$size}-pad-#{$col} {
+    padding-left: ($col / 12) * 100%;
+  }
+
+  .col-#{$size}-pad-right-#{$col} {
+    padding-right: ($col / 12) * 100%;
+  }
 }
 
 @for $i from 1 through 12 {

@@ -30,6 +30,19 @@
   .col-#{$size}-#{$col} {
       @include padded-box;
       width: ($col / 12) * 100%;
+
+      // Selectively remove padding from first, last, and full-width columns.
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-left: 0;
+      }
+
+      @if ($col == 12) {
+        padding: 0;
+      }
   }
 
   .col-#{$size}-offset-#{$col} {

@@ -15,16 +15,30 @@
   }
 
   $input-height: 40px;
-  $input-margin: 5px;
+  $input-margin: 10px;
 
   input,
   textarea {
     width: 100%;
     height: $input-height;
+
+    @include respond-to(small, true) {
+      margin-top: $input-margin;
+    }
+
+    @include respond-to(medium, true) {
+      margin-top: $input-margin;
+    }
+
+    @include respond-to(large, true) {
+      &:nth-of-type(2) {
+        margin-top: $input-margin;
+      }
+    }
   }
 
   textarea {
-    height: ($input-height * 2) + $input-margin * 2;
+    height: ($input-height * 2) + $input-margin;
   }
 
   button {

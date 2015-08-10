@@ -46,7 +46,7 @@ var browserSyncOptions = {
         'src/**/*.scss' // Sass
     ],
     port: cliArgs.port,
-    directory: true
+    index: 'index.html'
 };
 
 var conditionalBrowserSync = conditional(

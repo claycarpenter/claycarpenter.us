@@ -13,13 +13,14 @@
 // Section partials.
 @import "partials/header-footer";
 @import "partials/hero";
+@import "partials/about";
 
 body {
   background: url('/images/bg-poly-pattern.jpg') repeat;
 
   main > section {
     @extend .container;
-    
+
     padding: 10px;
   }
 }

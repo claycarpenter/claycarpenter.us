@@ -1,0 +1,17 @@
+
+.presence {
+  margin: 10px 0 20px 0;
+
+  .title {
+    @extend .container;
+
+    h3 {
+      float: left;
+      margin: 0;
+    }
+
+    a {
+      float: right;
+    }
+  }
+}

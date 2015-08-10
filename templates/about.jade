@@ -1,16 +1,23 @@
 extends /_short-hero.jade
 
 block content
-  section.hello
-    h2= hello.title
-    
-    each item in hello.content
-      h3= item.header
-      p= item.text
+  section.hello.theme-d
+    .col-lg-10.col-lg-offset-1.col-sm-12
+      h2= hello.title
+      
+      each item in hello.content
+        h3= item.header
+        p= item.text
   
-  section.online
-    each item in online.items
-      section.presence
-        h3= item.name
-        a(href=item.link.href, title=item.link.name)= item.link.name
-        p= item.blurb
+  section.online.theme-d
+    .col-lg-10.col-lg-offset-1.col-sm-12
+      h2= online.title
+    
+      each item in online.items
+        section.presence
+          .title
+            h3= item.name
+            
+            a(href=item.link.href, title=item.link.name)= item.link.name
+            
+          p= item.blurb

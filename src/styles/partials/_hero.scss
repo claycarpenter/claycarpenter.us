@@ -1,0 +1,22 @@
+/* Hero Styles */
+
+.hero {
+  @extend .theme-a;
+
+  padding: 10px;
+
+  h1 {
+    font-family: "BebasLight";
+    font-size: 90px;
+
+    color: $white;
+    margin: 20px auto;
+    // Fixes letter-spacing padding.
+    margin-right: -15px;
+
+    .soft {
+      margin: 0 -10px;
+      color: hsla(0, 0, 61, .4);
+    }
+  }
+}

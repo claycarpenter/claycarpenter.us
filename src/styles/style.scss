@@ -12,7 +12,12 @@
 
 // Section partials.
 @import "partials/header-footer";
+@import "partials/hero";
 
 body {
   background: url('/images/bg-poly-pattern.jpg') repeat;
+
+  main > section {
+    padding: 10px;
+  }
 }

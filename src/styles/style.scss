@@ -9,10 +9,12 @@
 @import "partials/colors";
 @import "partials/fonts";
 
-
 // Section partials.
 @import "partials/header-footer";
 @import "partials/hero";
+@import "partials/contact";
+
+// Page partials
 @import "partials/about";
 
 body {

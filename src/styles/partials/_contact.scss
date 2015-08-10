@@ -1,0 +1,52 @@
+/* Contact form styles */
+
+.contact {
+  @extend .container, .col-lg-pad-2, .col-lg-pad-right-2;
+
+  padding-bottom: 40px;
+
+  .left-col {
+    @extend .col-md-6, .col-sm-12;
+  }
+
+  .right-col {
+    @extend .col-md-6, .col-sm-12;
+    float: right;
+  }
+
+  $input-height: 40px;
+  $input-margin: 5px;
+
+  input[name='name'],
+  input[name='email'],
+  textarea[name='message'] {
+    width: 100%;
+    height: $input-height;
+    margin: $input-margin 0;
+
+    color: $dark-blue;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  textarea[name='message'] {
+    height: ($input-height * 2) + $input-margin * 2;
+    resize: none;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+      font-size: 15px;
+  }
+
+  button {
+    @extend .col-lg-6, .col-lg-offset-3, .col-md-6, .col-md-offset-3, .col-sm-12;
+
+    height: $input-height;
+    // Adding 5px to input height seems necessary to vertically
+    // center button text.
+    line-height: $input-height + 5px;
+
+    margin-top: 20px;
+  }
+}

@@ -45,6 +45,12 @@ $med-orange: hsla(36, 100, 50, 1);
       color: lighten($med-orange, 20%);
     }
   }
+
+  button {
+    background-color: rgba($med-orange, .30);
+    border: none;
+    color: $med-orange;
+  }
 }
 
 .theme-b {

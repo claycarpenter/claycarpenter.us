@@ -57,26 +57,31 @@ html
           block content
             p No content defined.
 
-        footer.theme-a
           //- Contact form
           //- What is the proper markup for this contact form?
-          .contact
-            input(
-              type='text'
-              name='name'
-              placeholder='Name')
-              
-            input(
-              type='text'
-              name='email'
-              placeholder='Email')
-              
-            input(
-              type='text'
-              name='name'
-              placeholder='Message')
+          section.contact.theme-a
+            a(name='contact')
+            h2 Say Hello
             
+            .left-col
+              input(
+                type='text'
+                name='name'
+                placeholder='Name')
+                
+              input(
+                type='text'
+                name='email'
+                placeholder='Email')
+            
+            .right-col
+              textarea(
+                type='text'
+                name='message'
+                placeholder='Message')
+
             button Submit
-          
+
+        footer.theme-a
           //- Footer links
           +navBar(links)

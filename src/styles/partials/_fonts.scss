@@ -31,14 +31,16 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
+  line-height: 27px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* H1, H2 are Bebas Book */
+
 h1,
-h2,
-h3 {
+h2 {
   font-family: "BebasBook";
 }
 
@@ -55,16 +57,16 @@ h2 {
   text-align: center;
 }
 
+/* H3-5 are Roboto Light */
 
-h2.light,
-h3.light,
-h4.light,
-h5.light {
+h3,
+h4,
+h5 {
   font-family: "Roboto";
   font-weight: 300;
 }
 
-h3.light {
+h3 {
   font-size: 24px;
   letter-spacing: 1.5px;
 }

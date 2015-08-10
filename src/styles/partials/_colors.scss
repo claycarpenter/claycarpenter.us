@@ -17,8 +17,9 @@ $med-orange: hsla(36, 100, 50, 1);
 
 .theme-a {
   /*
-    BG:   Dark blue
-    Font: Light gray
+    BG:     Dark blue
+    Header: Orange
+    Font:   Light gray
   */
 
   color: $light-gray;
@@ -36,12 +37,13 @@ $med-orange: hsla(36, 100, 50, 1);
 
 .theme-b {
   /*
-    BG:   Light gray
-    Font: Dark blue
+    BG:     Light gray
+    Header: Dark blue
+    Font:   Dark blue
   */
 
   color: $dark-blue;
-  background-color: rgba($white, .45);
+  background-color: rgba($white, .60);
 
   h1,
   h2,
@@ -55,8 +57,9 @@ $med-orange: hsla(36, 100, 50, 1);
 
 .theme-c {
   /*
-    BG:   Dark gray
-    Font: Light gray
+    BG:     Dark gray
+    Header: Orange
+    Font:   Light gray
   */
 
   color: $light-gray;
@@ -69,5 +72,28 @@ $med-orange: hsla(36, 100, 50, 1);
   h5,
   h6 {
     color: $med-orange;
+  }
+}
+
+.theme-d {
+  /*
+    BG:     Light gray
+    Header: Orange (1-2), Blue (3-6)
+    Font:   Dark blue
+  */
+
+  color: $dark-blue;
+  background-color: rgba($white, .60);
+
+  h1,
+  h2 {
+    color: $med-orange;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $med-blue;
   }
 }

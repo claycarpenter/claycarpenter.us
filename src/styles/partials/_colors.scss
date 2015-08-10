@@ -46,6 +46,11 @@ $med-orange: hsla(36, 100, 50, 1);
     }
   }
 
+  input,
+  textarea {
+    color: $dark-blue;
+  }
+
   button {
     background-color: rgba($med-orange, .30);
     border: none;

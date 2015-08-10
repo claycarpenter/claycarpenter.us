@@ -1,0 +1,20 @@
+/* Input styles */
+@mixin input-placeholder {
+  ::-webkit-input-placeholder { @content; }
+  ::-moz-input-placeholder { @content; }
+  :-ms-input-placeholder { @content; }
+}
+
+input,
+textarea {
+  font-size: 16px;
+  padding-left: 10px;
+
+  @include input-placeholder {
+    font-size: 15px;
+  }
+}
+
+textarea {
+  resize: none;
+}

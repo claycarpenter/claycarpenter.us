@@ -26,28 +26,30 @@
   padding: 0 1%;
 }
 
-@for $i from 1 through 12 {
-  .col-sm-#{$i} {
+@mixin grid-builder($size, $col) {
+  .col-#{$size}-#{$col} {
       @include padded-box;
-      width: ($i / 12) * 100%;
+      width: ($col / 12) * 100%;
   }
+
+  .col-#{$site}-offset-#{$col} {
+    margin-left: ($col / 12) * 100%;
+  }
+}
+
+@for $i from 1 through 12 {
+  @include grid-builder('sm', $i);
 }
 
 @media only screen and (min-width: $break-md) {
   @for $i from 1 through 12 {
-    .col-md-#{$i} {
-        @include padded-box;
-        width: ($i / 12) * 100%;
-    }
+    @include grid-builder('md', $i);
   }
 }
 
 @media only screen and (min-width: $break-lg) {
   @for $i from 1 through 12 {
-    .col-lg-#{$i} {
-        @include padded-box;
-        width: ($i / 12) * 100%;
-    }
+    @include grid-builder('lg', $i);
   }
 }
 

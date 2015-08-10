@@ -32,7 +32,7 @@
       width: ($col / 12) * 100%;
   }
 
-  .col-#{$site}-offset-#{$col} {
+  .col-#{$size}-offset-#{$col} {
     margin-left: ($col / 12) * 100%;
   }
 }

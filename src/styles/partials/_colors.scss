@@ -33,6 +33,18 @@ $med-orange: hsla(36, 100, 50, 1);
   h6 {
     color: $med-orange;
   }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $med-orange;
+
+    &:hover,
+    &:active {
+      color: lighten($med-orange, 20%);
+    }
+  }
 }
 
 .theme-b {
@@ -53,6 +65,18 @@ $med-orange: hsla(36, 100, 50, 1);
   h6 {
     color: $med-blue;
   }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $med-blue;
+
+    &:hover,
+    &:active {
+      color: lighten($med-blue, 20%);
+    }
+  }
 }
 
 .theme-c {
@@ -72,6 +96,18 @@ $med-orange: hsla(36, 100, 50, 1);
   h5,
   h6 {
     color: $med-orange;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $med-orange;
+
+    &:hover,
+    &:active {
+      color: lighten($med-orange, 20%);
+    }
   }
 }
 
@@ -95,5 +131,17 @@ $med-orange: hsla(36, 100, 50, 1);
   h5,
   h6 {
     color: $med-blue;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $med-blue;
+
+    &:hover,
+    &:active {
+      color: lighten($med-blue, 20%);
+    }
   }
 }

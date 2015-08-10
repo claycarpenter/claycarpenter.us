@@ -4,6 +4,7 @@ title: Case Studies
 template: /case-study-index.jade
 datePublished: "???"
 draft: false
+navPage: Case Studies
 
 list:
   key: caseStudies

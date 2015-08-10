@@ -5,6 +5,7 @@ template: /case-study-details.jade
 datePublished: "???"
 draft: false
 collection: caseStudies
+navPage: Case Studies
 
 # Page Content
 listImage:

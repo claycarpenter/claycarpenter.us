@@ -5,6 +5,7 @@ template: /project-details.jade
 datePublished: "???"
 draft: false
 collection: projects
+navPage: Projects
 
 # Page Content
 

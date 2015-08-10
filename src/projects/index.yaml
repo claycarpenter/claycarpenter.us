@@ -4,6 +4,7 @@ title: Projects
 template: /project-index.jade
 datePublished: "???"
 draft: false
+navPage: Projects
 
 list:
   key: projects

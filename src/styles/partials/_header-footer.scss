@@ -1,0 +1,51 @@
+
+.nav-bar {
+  @extend .container;
+
+  padding: 10px;
+
+  ul {
+    list-style-type: none;
+
+    float: right;
+
+    margin-top: 8px;
+    margin-bottom: 0;
+
+    li {
+      display: inline;
+
+      margin-right: 20px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  font-size: 15px;
+  font-weight: 300;
+
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: darken($light-gray, 10%);
+    text-decoration: none;
+
+    &.current {
+      color: $white;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .logo {
+    $size: 30px;
+    width: $size;
+    height: $size;
+  }
+}

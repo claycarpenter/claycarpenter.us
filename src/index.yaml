@@ -4,6 +4,7 @@ title: Portfolio of Clay Carpenter
 template: /index.jade
 datePublished: "???"
 draft: false
+navPage: Home
 
 # Page Content
 hello:

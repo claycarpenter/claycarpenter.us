@@ -27,11 +27,13 @@ doctype html
   ];
 
 mixin navBar(links)
-  img.logo(src='/images/logo.svg', title='CAC')
-  
-  ul
-    each link in links
-      li: a(href=link.href, title=link.title)= link.title
+  .nav-bar
+    img.logo(src='/images/logo.svg', title='CAC')
+    
+    ul
+      each link in links
+        li
+          a(href=link.href, title=link.title, class={current: link.title === navPage})= link.title
 
 html
     head

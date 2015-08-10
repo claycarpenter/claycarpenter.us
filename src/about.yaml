@@ -4,6 +4,7 @@ title: About
 template: /about.jade
 datePublished: "???"
 draft: false
+navPage: About
 
 # Page Content
 hello:

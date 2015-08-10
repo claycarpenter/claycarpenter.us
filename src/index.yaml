@@ -5,6 +5,7 @@ template: /index.jade
 datePublished: "???"
 draft: false
 navPage: Home
+pageClass: home
 
 # Page Content
 hello:

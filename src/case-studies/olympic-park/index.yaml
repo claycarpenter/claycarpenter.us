@@ -8,8 +8,14 @@ collection: caseStudies
 navPage: Case Studies
 
 # Page Content
+
 listImage:
-  imgSrc: /images/projects/olympic-park-showcase-list.jpg
+  imgSrc: /projects/olympic-park/thumb.jpg
+
+skillIcons:
+  - shortName: ux
+  - shortName: design
+  - shortName: dev
 
 intro:
   blurb: |

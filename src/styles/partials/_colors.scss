@@ -51,7 +51,8 @@ $med-orange: hsla(36, 100, 50, 1);
     color: $dark-blue;
   }
 
-  button {
+  button,
+  .button {
     background-color: rgba($med-orange, .30);
     border: none;
     color: $med-orange;
@@ -104,6 +105,13 @@ $med-orange: hsla(36, 100, 50, 1);
     }
   }
 
+  button,
+  .button {
+    background-color: rgba($med-blue, .30);
+    border: none;
+    color: $med-blue;
+  }
+
   .logo {
     fill: $med-blue;
     fill-opacity: 1;
@@ -149,6 +157,13 @@ $med-orange: hsla(36, 100, 50, 1);
     &:active {
       color: lighten($med-orange, 20%);
     }
+  }
+
+  button,
+  .button {
+    background-color: rgba($med-orange, .30);
+    border: none;
+    color: $med-orange;
   }
 
   .logo {
@@ -199,6 +214,13 @@ $med-orange: hsla(36, 100, 50, 1);
     &:active {
       color: lighten($med-blue, 20%);
     }
+  }
+
+  button,
+  .button {
+    background-color: rgba($med-blue, .30);
+    border: none;
+    color: $med-blue;
   }
 
   .logo {

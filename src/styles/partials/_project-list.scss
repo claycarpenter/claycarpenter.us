@@ -1,0 +1,45 @@
+/* Project List page styles. */
+
+.project {
+  @extend .col-lg-pad-2, .col-lg-pad-right-2, .col-md-pad-1, .col-md-pad-right-1;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .left-col {
+    @extend .col-md-6, .col-sm-12;
+    padding: 0 3% 0 0;
+  }
+
+  .right-col {
+    @extend .col-md-6, .col-sm-12;
+    padding: 0 0 0 3%;
+    float: right;
+  }
+
+  h3 {
+      margin-top: 0;
+  }
+
+  .project-icons {
+    list-style-type: none;
+
+    margin: 20px 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      padding-right: 30px;
+    }
+  }
+
+  .project-thumbnail {
+    width: 100%;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    stroke-width: 1;
+  }
+}

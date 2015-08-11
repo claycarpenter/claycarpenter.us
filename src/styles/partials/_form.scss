@@ -18,3 +18,14 @@ textarea {
 textarea {
   resize: none;
 }
+
+.button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 13px 0 8px 0;
+  font-family: "BebasRegular";
+  font-weight: bold;
+  letter-spacing: 6px;
+  font-size: 22px;
+}

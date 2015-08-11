@@ -11,7 +11,7 @@ block content
         each skillIcon in project.skillIcons
           li: img(src=skillIcon.imgSrc, title=skillIcon.name)
             
-      a.button(href=project.path) Learn More
+      a.button(href='/' + project.path) Learn More
         
       img(src=project.listImage.imgSrc, title=project.title)
       

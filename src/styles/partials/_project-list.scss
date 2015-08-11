@@ -7,12 +7,18 @@
   padding-top: $padding;
   padding-bottom: $padding;
 
-  .left-col {
+  @include respond-to(large) {
+      $padding: 60px;
+      padding-top: $padding;
+      padding-bottom: $padding;
+  }
+
+  .text-col {
     @extend .col-md-6, .col-sm-12;
     padding: 0 3% 0 0;
   }
 
-  .right-col {
+  .pic-col {
     @extend .col-md-6, .col-sm-12;
     padding: 0 0 0 3%;
     float: right;

@@ -19,7 +19,7 @@ mixin skillIconBuilder(iconName)
 block content
   each project, index in list.items
     - var isEven = (index % 2 === 0);
-    section.project(class={'theme-a': !isEven, 'theme-b': isEven})
+    section.project-list-item(class={'theme-a': !isEven, 'theme-b': isEven})
       
       .title
         h3= project.title

@@ -13,15 +13,33 @@
       padding-bottom: $padding;
   }
 
-  .text-col {
+  .title,
+  .details {
     @extend .col-md-6, .col-sm-12;
-    padding: 0 3% 0 0;
+
+    @include respond-to(medium) {
+      padding: 0 3% 0 0;
+    }
   }
 
-  .pic-col {
+  .pic {
     @extend .col-md-6, .col-sm-12;
-    padding: 0 0 0 3%;
+
+    @include respond-to(medium) {
+      padding: 0 0 0 3%;
+    }
+
     float: right;
+    text-align: center;
+
+    img {
+      width: 60%;
+      box-shadow: 0 2px 6px 0 hsla(0, 0, 0, .6);
+
+      @include respond-to(medium) {
+        width: 100%;
+      }
+    }
   }
 
   h3 {
@@ -40,9 +58,7 @@
     }
   }
 
-  .project-thumbnail {
-    width: 100%;
-  }
+
 
   .icon {
     width: 35px;

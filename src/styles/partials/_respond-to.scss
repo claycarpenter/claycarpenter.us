@@ -5,12 +5,15 @@
     $max-width: $break-sm;
   }
   @else if $media == medium {
-    $min-width: $break-sm + 1px;
+    $min-width: $break-md;
     $max-width: $break-lg - 1px;
   }
   @else if $media == large {
     $min-width: $break-lg;
     $max-width: 9999px;
+  }
+  @else {
+
   }
 
   // If isSpecific, set max width query

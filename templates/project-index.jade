@@ -20,9 +20,14 @@ block content
   each project, index in list.items
     - var isEven = (index % 2 === 0);
     section.project(class={'theme-a': !isEven, 'theme-b': isEven})
-      .text-col
+      
+      .title
         h3= project.title
         
+      .pic
+        img(src=project.listImage.imgSrc, title=project.title)
+      
+      .details
         p= project.intro.blurb
         
         ul.project-icons
@@ -31,7 +36,4 @@ block content
               +skillIconBuilder(skillIcon.shortName)
               
         a.button(href='/' + project.path) Learn More
-      
-      .pic-col
-        img.project-thumbnail(src=project.listImage.imgSrc, title=project.title)
       

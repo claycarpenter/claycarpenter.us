@@ -13,12 +13,8 @@ listImage:
   imgSrc: /projects/fundrally/thumb.jpg
 
 skillIcons:
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
+  - shortName: ux
+  - shortName: design
 
 projectLinks:
   items:

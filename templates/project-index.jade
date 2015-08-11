@@ -1,15 +1,44 @@
 extends /_short-hero.jade
- 
+
+//-
+  imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+
+-
+  var skillIcons = {
+    userExperience: {
+      imgSrc: '../static/images/skill-icons/dev.svg',
+      title: 'User Experience'
+    }
+  }
+
+mixin skillIconBuilder(iconName)
+  case iconName
+    when 'design'
+      svg.icon(width="58px" height="58px" viewBox="0 0 58 58" title="Design")
+        include ../static/images/skill-icons/design.svg
+    when 'dev'
+      svg.icon(width="57px" height="57px" viewBox="0 0 57 57")
+        include ../static/images/skill-icons/dev.svg
+    when 'ux'
+      svg.icon(width="57px" height="46px" viewBox="0 0 57 46")
+        include ../static/images/skill-icons/ux.svg
+    when 'write'
+      svg.icon(width="57px" height="58px" viewBox="0 0 57 58")
+        include ../static/images/skill-icons/write.svg
+
+
 block content
   each project in list.items
-    section.project
-      h2= project.title
+    section.project.theme-a
+      h3= project.title
       
       p= project.intro.blurb
       
       ul.project-icons
         each skillIcon in project.skillIcons
-          li: img(src=skillIcon.imgSrc, title=skillIcon.name)
+          li
+            +skillIconBuilder(skillIcon.shortName)
             
       a.button(href='/' + project.path) Learn More
         

@@ -13,12 +13,9 @@ listImage:
   imgSrc: /projects/olympic-park/thumb.jpg
 
 skillIcons:
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
+  - shortName: ux
+  - shortName: design
+  - shortName: dev
 
 projectLinks:
   items:

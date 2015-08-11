@@ -9,6 +9,7 @@
 @import "partials/colors";
 @import "partials/fonts";
 @import "partials/form";
+@import "partials/project-list-item";
 
 // Section partials.
 @import "partials/header-footer";
@@ -17,7 +18,6 @@
 
 // Page partials
 @import "partials/about";
-@import "partials/project-list";
 
 body {
   background: url('/images/bg-poly-pattern.jpg') repeat;

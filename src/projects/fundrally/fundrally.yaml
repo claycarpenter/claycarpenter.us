@@ -1,0 +1,87 @@
+---
+# Page Metadata
+title: FundRally
+template: /project-details.jade
+datePublished: "???"
+draft: false
+collection: projects
+navPage: Projects
+
+# Page Content
+
+listImage:
+  imgSrc: /projects/fundrally/thumb.jpg
+
+skillIcons:
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+  - imgSrc: /images/skill-icons/something.svg
+    name: User Experience
+
+projectLinks:
+  items:
+    - name: Gallery
+      href: '#gallery'
+
+    - name: View Live
+      href: http://claycarpenter.github.io/olympic-park/
+
+    - name: GitHub
+      href: http://github.com/claycarpenter/olympic-park/
+
+intro:
+  blurb: |
+    Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
+
+toolsAndTechniques:
+  categories:
+    - name: Design Tools
+      skills:
+        - name: Sketch
+        - name: Illustrator
+    - name: Design Techniques
+      skills:
+        - name: Logo Creation
+        - name: Responsive Web Design
+    - name: Languages
+      skills:
+        - name: HTML
+        - name: CSS
+        - name: JavaScript
+    - name: Frameworks
+      skills:
+        - name: jQuery
+
+details:
+  items:
+    # Paragraph
+    - _type: paragraph
+      _content: |
+        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+
+    # Single image
+    - _type: image
+      _content:
+        imgSrc: 'http://loremflickr.com/320/240/dog'
+        title: 'An image'
+
+    # Paragraph
+    - _type: paragraph
+      _content: |
+        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+
+
+    # Paragraph
+    - _type: paragraph
+      _content: |
+        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+
+    # Paragraph
+    - _type: dyn
+      _lang: jade
+      _content: |
+        img(src='http://lorempixel.com/g/400/200/nature', title=title)
+
+# Stop cutting my file short

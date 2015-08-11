@@ -10,7 +10,7 @@ navPage: Projects
 # Page Content
 
 listImage:
-  imgSrc: /images/projects/olympic-park-showcase-list.jpg
+  imgSrc: /projects/olympic-park/thumb.jpg
 
 skillIcons:
   - imgSrc: /images/skill-icons/something.svg

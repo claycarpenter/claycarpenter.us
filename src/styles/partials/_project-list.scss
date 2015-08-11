@@ -3,8 +3,9 @@
 .project {
   @extend .col-lg-pad-2, .col-lg-pad-right-2, .col-md-pad-1, .col-md-pad-right-1;
 
-  padding-top: 30px;
-  padding-bottom: 30px;
+  $padding: 40px;
+  padding-top: $padding;
+  padding-bottom: $padding;
 
   .left-col {
     @extend .col-md-6, .col-sm-12;

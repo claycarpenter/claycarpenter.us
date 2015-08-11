@@ -1,0 +1,14 @@
+/* Misc styles */
+
+@mixin plain-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.subtle:link,
+.subtle:visited,
+.subtle:hover,
+.subtle:active {
+  font-size: 14px;
+  color: hsla(0,0,50, .5);
+}

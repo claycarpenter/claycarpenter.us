@@ -1,0 +1,71 @@
+/* Project Details styles. */
+
+.project-skills {
+  @include plain-list;
+
+  .category-name {
+    display: inline-block;
+    width: 9em;
+
+    font-weight: 300;
+  }
+
+  li {
+    margin-bottom: .5em;
+
+    // &:last-of-type {
+    //   margin-bottom: 0;
+    // }
+  }
+
+  .category-skills {
+    @include plain-list;
+
+    display: inline-block;
+
+    li {
+      display: inline;
+      margin-right: .2em;
+    }
+  }
+}
+
+.project-links {
+  @include plain-list;
+
+  margin-bottom: 0;
+  margin-top: 10px;
+
+  .project-link {
+    display: inline-block;
+    width: 10em;
+    margin-right: 1em;
+  }
+}
+
+.gallery-image {
+  text-align: center;
+
+  img {
+    box-shadow: 0 2px 6px 0 hsla(0, 0, 0, .6);
+  }
+}
+
+.back-nav {
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  p {
+    margin: 10px 0 0 0;
+  }
+}
+
+.project-title {
+  padding-top: 10px;
+  padding-bottom: 1px;
+
+  h2 {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+}

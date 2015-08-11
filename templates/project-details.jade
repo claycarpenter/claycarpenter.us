@@ -5,38 +5,42 @@ block hero
     h1 Projects
 
 block content
-  p.back-nav
-    a(href='/projects/') Back to Projects
+  .back-nav.col-8-10-pad.theme-b
+    p
+      a.subtle(href='/projects/') &lt; Back to Projects
   
-  section.links
+  .project-title.col-8-10-pad.theme-d
+    h2= title
+  
+  section.col-8-10-pad.theme-b
     ul.project-links
       each link in projectLinks.items
-        li
+        li.project-link
           a.button(
             href=link.href
             title=link.name
           )= link.name
     
-  section.intro
-    h1 Intro
+  section.col-8-10-pad.theme-b
+    h3 Intro
     
     p= intro.blurb
     
-  section.solution
-    h1 Tools & Techniques
+  section.col-8-10-pad.theme-b
+    h3 Tools & Techniques
     
     //- Iterate over categories, then list items
-    ul
+    ul.project-skills
       each category in toolsAndTechniques.categories
         li
           .category-name= category.name
-          .category-skills
-            ul
-              each skill, index in category.skills                
-                li= skill.name + (index === category.skills.length - 1 ? '' : ',')
+          
+          ul.category-skills
+            each skill, index in category.skills                
+              li= skill.name + (index === category.skills.length - 1 ? '' : ',')
     
-  section.details
-    h1 Details
+  section.col-8-10-pad.theme-b
+    h3 Details
 
     each item in details.items
       case item._type
@@ -44,10 +48,11 @@ block content
           p= item._content
         
         when 'image'
-          img(
-            src=item._content.imgSrc
-            title=item._content.title
-          )
+          figure.gallery-image.single
+            img(
+              src=item._content.imgSrc
+              title=item._content.title
+            )
         
         when 'imageSet'
           ul.image-set

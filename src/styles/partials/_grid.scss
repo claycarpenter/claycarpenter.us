@@ -82,3 +82,11 @@
   max-width: 1024px;
   margin: 0 auto;
 }
+
+.col-10-pad {
+  @extend .col-md-pad-1, .col-md-pad-right-1;
+}
+
+.col-8-10-pad {
+  @extend .col-lg-pad-2, .col-lg-pad-right-2, .col-md-pad-1, .col-md-pad-right-1;
+}

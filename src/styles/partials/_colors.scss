@@ -57,8 +57,19 @@ $med-orange: hsla(36, 100, 50, 1);
     color: $med-orange;
   }
 
-  svg {
-    path { fill: $med-orange;}
+  .logo {
+    fill: $med-orange;
+    fill-opacity: 1;
+  }
+
+  .icon {
+    stroke: $med-orange;
+    stroke-width: 2;
+    fill-opacity: 0;
+
+    &.small {
+      stroke-width: 1;
+    }
   }
 }
 
@@ -92,6 +103,21 @@ $med-orange: hsla(36, 100, 50, 1);
       color: lighten($med-blue, 20%);
     }
   }
+
+  .logo {
+    fill: $med-blue;
+    fill-opacity: 1;
+  }
+
+  .icon {
+    stroke: $med-blue;
+    stroke-width: 2;
+    fill-opacity: 0;
+
+    &.small {
+      stroke-width: 1;
+    }
+  }
 }
 
 .theme-c {
@@ -122,6 +148,21 @@ $med-orange: hsla(36, 100, 50, 1);
     &:hover,
     &:active {
       color: lighten($med-orange, 20%);
+    }
+  }
+
+  .logo {
+    fill: $med-orange;
+    fill-opacity: 1;
+  }
+
+  .icon {
+    stroke: $med-orange;
+    stroke-width: 2;
+    fill-opacity: 0;
+
+    &.small {
+      stroke-width: 1;
     }
   }
 }
@@ -157,6 +198,21 @@ $med-orange: hsla(36, 100, 50, 1);
     &:hover,
     &:active {
       color: lighten($med-blue, 20%);
+    }
+  }
+
+  .logo {
+    fill: $med-blue;
+    fill-opacity: 1;
+  }
+
+  .icon {
+    stroke: $med-blue;
+    stroke-width: 2;
+    fill-opacity: 0;
+
+    &.small {
+      stroke-width: 1;
     }
   }
 }

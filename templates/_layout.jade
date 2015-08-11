@@ -28,7 +28,8 @@ doctype html
 
 mixin navBar(links)
   .nav-bar
-    img.logo(src='/images/logo.svg', title='CAC')
+    svg.logo(viewBox="0 0 35 35")
+      include ../static/images/logo-min.svg
     
     ul
       each link in links

@@ -1,17 +1,6 @@
 extends /_short-hero.jade
- 
+
+extends /_short-hero.jade
+
 block content
-  each project in list.items
-    section.project
-      h2= project.title
-      
-      p= project.intro.blurb
-      
-      ul.project-icons
-        each skillIcon in project.skillIcons
-          li: img(src=skillIcon.imgSrc, title=skillIcon.name)
-            
-      a.button(href=project.path) Case Study
-        
-      img(src=project.listImage.imgSrc, title=project.title)
-      
+  +projectListBuilder(list.items, 'Case Study')

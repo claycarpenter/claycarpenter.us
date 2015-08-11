@@ -14,3 +14,24 @@ mixin skillIconBuilder(iconName)
     when 'write'
       svg.icon(viewBox="0 0 57 58")
         include ../static/images/skill-icons/write.svg
+
+mixin projectListBuilder(projectList, buttonLabel) 
+  each project, index in projectList
+    - var isEven = (index % 2 === 0);
+    section.project-list-item(class={'theme-a': !isEven, 'theme-b': isEven})
+      
+      .title
+        h3= project.title
+        
+      .pic
+        img(src=project.listImage.imgSrc, title=project.title)
+      
+      .details
+        p= project.intro.blurb
+        
+        ul.project-icons
+          each skillIcon in project.skillIcons
+            li
+              +skillIconBuilder(skillIcon.shortName)
+              
+        a.button(href='/' + project.path)= buttonLabel

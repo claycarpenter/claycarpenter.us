@@ -1,23 +1,4 @@
 extends /_short-hero.jade
 
 block content
-  each project, index in list.items
-    - var isEven = (index % 2 === 0);
-    section.project-list-item(class={'theme-a': !isEven, 'theme-b': isEven})
-      
-      .title
-        h3= project.title
-        
-      .pic
-        img(src=project.listImage.imgSrc, title=project.title)
-      
-      .details
-        p= project.intro.blurb
-        
-        ul.project-icons
-          each skillIcon in project.skillIcons
-            li
-              +skillIconBuilder(skillIcon.shortName)
-              
-        a.button(href='/' + project.path) Learn More
-      
+  +projectListBuilder(list.items, 'Learn More')

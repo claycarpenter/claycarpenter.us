@@ -17,8 +17,7 @@ skills:
   items:
     - name: Development
       icon:
-        imgSrc: /assets/images/icons/development.svg
-        alt: Development
+        shortName: dev
       topics:
         - Front end web apps
         - Back end server solutions
@@ -26,8 +25,7 @@ skills:
 
     - name: User Experience
       icon:
-        imgSrc: /assets/images/icons/development.svg
-        alt: Development
+        shortName: ux
       topics:
         - User research
         - Content and feature planning
@@ -35,8 +33,7 @@ skills:
 
     - name: Design
       icon:
-        imgSrc: /assets/images/icons/development.svg
-        alt: Development
+        shortName: design
       topics:
         - Responsive web design
         - Mobile app interfaces
@@ -44,8 +41,7 @@ skills:
 
     - name: Write
       icon:
-        imgSrc: /assets/images/icons/development.svg
-        alt: Development
+        shortName: write
       topics:
         - Technical documentation
         - User guides

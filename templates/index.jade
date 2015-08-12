@@ -4,34 +4,38 @@ block hero
   .hero
     h1 Coding#[span.soft /]Designing
     
-    p
+    h3
       span.rotator elegant
       | mobile and web experiences
 
 block content
-  section.hello.theme-b
+  section.col-8-10-pad.theme-b
     h2= hello.title
     
     p= hello.intro
     
-  section.skills.theme-c
+  section.col-8-10-pad.theme-c
     h2= skills.title
     
-    ul
+    ul.skills-list
       each skill in skills.items
         li
-          h3.light= skill.name
-          ul
+          .icon-container
+            +skillIconBuilder(skill.icon.shortName)
+          
+          h3.text-center= skill.name
+          
+          ul.skill-items
             each topic in skill.topics
-              li #{topic}
+              li.text-center #{topic}
 
-  section.showcase.theme-a
+  section.col-8-10-pad.theme-a
     h2= showcases.title
     
     ul
       each showcase in showcases.items
         li
-          h3.light= showcase.name
+          h3= showcase.name
           
           p= showcase.blurb
           

@@ -7,7 +7,11 @@
 
   h1 {
     font-family: "BebasLight";
-    font-size: 90px;
+    font-size: 30px;
+
+    @include respond-to(medium) {
+      font-size: 90px;
+    }
 
     color: $white;
 
@@ -17,6 +21,17 @@
     .soft {
       margin: 0 -10px;
       color: hsla(0, 0, 61, .4);
+    }
+  }
+
+  h3 {
+    text-align: center;
+    color: $white;
+
+    .rotator {
+      color: $med-orange;
+
+      margin-right: .3em;
     }
   }
 }

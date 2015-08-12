@@ -1,0 +1,35 @@
+/* Home styles */
+
+.skills-list {
+  @include plain-list;
+
+  > li {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 230px;
+
+    @include respond-to(medium) {
+      width: 50%;
+    }
+  }
+
+  h3 {
+    margin-top: .3em;
+    margin-bottom: .2em;
+  }
+}
+
+.icon-container {
+  height: 70px;
+
+  @extend .text-center;
+
+  .icon {
+    width: 60px;
+  }
+}
+
+.skill-items {
+  @include plain-list;
+}

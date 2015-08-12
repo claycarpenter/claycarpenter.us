@@ -6,7 +6,6 @@ var Metalsmith = require('metalsmith'),
     browserSync = require('metalsmith-browser-sync'),
     drafts = require('metalsmith-drafts'),
     sass = require('metalsmith-sass'),
-    static = require('metalsmith-static'),
     collections = require('metalsmith-collections'),
     dynContentConverter = require('./dyn-content-converter'),
     yargs = require('yargs');
@@ -76,16 +75,7 @@ var metalsmith = Metalsmith(__dirname)
 
     .use(collectionsCleaner(['caseStudies', 'projects']))
 
-    .use(collections(
-    //   {
-    //   caseStudies: {
-    //     pattern: 'case-studies/*.html'
-    //   },
-    //   projects: {
-    //     pattern: 'projects/*.html'
-    //   }
-    // }
-    ))
+    .use(collections())
 
     .use(collectionsSpy())
 
@@ -99,12 +89,7 @@ var metalsmith = Metalsmith(__dirname)
     .use(sass({outputStyle: 'expanded'}))
 
     // Conditionally watch and serve with BrowserSync.
-    .use(conditionalBrowserSync)
-
-    // .use(static({
-    //   src:'static',
-    //   dest:'.'
-    // }));
+    .use(conditionalBrowserSync);
 
 
 metalsmith.build(function (err, files) {

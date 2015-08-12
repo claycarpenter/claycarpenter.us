@@ -101,10 +101,10 @@ var metalsmith = Metalsmith(__dirname)
     // Conditionally watch and serve with BrowserSync.
     .use(conditionalBrowserSync)
 
-    .use(static({
-      src:'static',
-      dest:'.'
-    }));
+    // .use(static({
+    //   src:'static',
+    //   dest:'.'
+    // }));
 
 
 metalsmith.build(function (err, files) {

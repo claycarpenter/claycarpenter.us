@@ -9,6 +9,7 @@ var Metalsmith = require('metalsmith'),
     collections = require('metalsmith-collections'),
     dynContentConverter = require('./dyn-content-converter'),
     filenames = require('metalsmith-filenames'),
+    rename = require('metalsmith-rename'),
     yargs = require('yargs');
 
 // Define default values for CLI arguments.
@@ -69,10 +70,9 @@ var metalsmith = Metalsmith(__dirname)
         drafts()
     ))
 
-    .use(yamlToHtmlRenamer())
+    .use(rename([[/\.yaml$/, '.html']]))
 
     // Capture HTML path.
-    //.use(updatePaths())
     .use(filenames())
 
     .use(collectionsCleaner(['caseStudies', 'projects']))
@@ -92,7 +92,6 @@ var metalsmith = Metalsmith(__dirname)
 
     // Conditionally watch and serve with BrowserSync.
     .use(conditionalBrowserSync);
-
 
 metalsmith.build(function (err, files) {
     console.log('Building.');
@@ -127,7 +126,6 @@ function listPage (files, metalsmith, done) {
       console.log('collections list found');
 
       listInfo.items = metalsmith.metadata()[listInfo.key];
-
     }
   });
 
@@ -161,43 +159,6 @@ function collectionsSpy () {
 
     done();
   }
-}
-
-function yamlToHtmlRenamer () {
-  var yamlSearchRegex = /\.yaml$/;
-
-  return function (files, metalsmith, done) {
-
-    var basename = require('path').basename,
-        extname = require('path').extname;
-
-    Object.keys(files).forEach(function (file) {
-      console.log('Existing key:', file);
-
-
-      if (yamlSearchRegex.test(file)) {
-        var htmlFilePath = file.replace(yamlSearchRegex, '.html');
-
-        var fileData = files[file];
-
-        delete files[file];
-        files[htmlFilePath] = fileData;
-        console.log('New key:', htmlFilePath);
-      }
-    });
-
-    done();
-  };
-}
-
-function updatePaths () {
-  return function (files, metalsmith, done) {
-    Object.keys(files).forEach(function (fileKey) {
-      files[fileKey].path = fileKey;
-    });
-
-    done();
-  };
 }
 
 function isDraftModeTest () {

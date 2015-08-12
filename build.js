@@ -124,7 +124,7 @@ function listPage (files, metalsmith, done) {
     var listInfo = files[file].list;
 
     if (listInfo && listInfo.key) {
-      console.log('collections list found');
+      debug('collections list found');
 
       listInfo.items = metalsmith.metadata()[listInfo.key];
     }

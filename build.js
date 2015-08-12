@@ -8,6 +8,7 @@ var Metalsmith = require('metalsmith'),
     sass = require('metalsmith-sass'),
     collections = require('metalsmith-collections'),
     dynContentConverter = require('./dyn-content-converter'),
+    filenames = require('metalsmith-filenames'),
     yargs = require('yargs');
 
 // Define default values for CLI arguments.
@@ -71,7 +72,8 @@ var metalsmith = Metalsmith(__dirname)
     .use(yamlToHtmlRenamer())
 
     // Capture HTML path.
-    .use(updatePaths())
+    //.use(updatePaths())
+    .use(filenames())
 
     .use(collectionsCleaner(['caseStudies', 'projects']))
 

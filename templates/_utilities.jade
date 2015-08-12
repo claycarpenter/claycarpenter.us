@@ -34,7 +34,7 @@ mixin projectListBuilder(projectList, buttonLabel)
             li
               +skillIconBuilder(skillIcon.shortName)
               
-        a.button(href='/' + project.path)= buttonLabel
+        a.button(href='/' + project.filename)= buttonLabel
 
 mixin dynContent(items)
   each item in items

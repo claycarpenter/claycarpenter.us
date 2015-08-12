@@ -1,0 +1,2073 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic);
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"], input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*
+  Basic grid foundation.
+*/
+.container, .nav-bar, .contact, .presence .title, body main > section {
+  width: auto;
+  margin: 0 auto;
+}
+
+.container:after,
+.nav-bar:after,
+.contact:after,
+.presence .title:after,
+body main > section:after,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.col-sm-1 {
+  float: left;
+  padding: 0 1%;
+  width: 8.33333%;
+}
+
+.col-sm-1:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-1:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-1 {
+  margin-left: 8.33333%;
+}
+
+.col-sm-offset-right-1 {
+  margin-right: 8.33333%;
+}
+
+.col-sm-pad-1 {
+  padding-left: 8.33333%;
+}
+
+.col-sm-pad-right-1 {
+  padding-right: 8.33333%;
+}
+
+.col-sm-2 {
+  float: left;
+  padding: 0 1%;
+  width: 16.66667%;
+}
+
+.col-sm-2:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-2:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-2 {
+  margin-left: 16.66667%;
+}
+
+.col-sm-offset-right-2 {
+  margin-right: 16.66667%;
+}
+
+.col-sm-pad-2 {
+  padding-left: 16.66667%;
+}
+
+.col-sm-pad-right-2 {
+  padding-right: 16.66667%;
+}
+
+.col-sm-3 {
+  float: left;
+  padding: 0 1%;
+  width: 25%;
+}
+
+.col-sm-3:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-3:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-3 {
+  margin-left: 25%;
+}
+
+.col-sm-offset-right-3 {
+  margin-right: 25%;
+}
+
+.col-sm-pad-3 {
+  padding-left: 25%;
+}
+
+.col-sm-pad-right-3 {
+  padding-right: 25%;
+}
+
+.col-sm-4 {
+  float: left;
+  padding: 0 1%;
+  width: 33.33333%;
+}
+
+.col-sm-4:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-4:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-4 {
+  margin-left: 33.33333%;
+}
+
+.col-sm-offset-right-4 {
+  margin-right: 33.33333%;
+}
+
+.col-sm-pad-4 {
+  padding-left: 33.33333%;
+}
+
+.col-sm-pad-right-4 {
+  padding-right: 33.33333%;
+}
+
+.col-sm-5 {
+  float: left;
+  padding: 0 1%;
+  width: 41.66667%;
+}
+
+.col-sm-5:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-5:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-5 {
+  margin-left: 41.66667%;
+}
+
+.col-sm-offset-right-5 {
+  margin-right: 41.66667%;
+}
+
+.col-sm-pad-5 {
+  padding-left: 41.66667%;
+}
+
+.col-sm-pad-right-5 {
+  padding-right: 41.66667%;
+}
+
+.col-sm-6 {
+  float: left;
+  padding: 0 1%;
+  width: 50%;
+}
+
+.col-sm-6:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-6:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-6 {
+  margin-left: 50%;
+}
+
+.col-sm-offset-right-6 {
+  margin-right: 50%;
+}
+
+.col-sm-pad-6 {
+  padding-left: 50%;
+}
+
+.col-sm-pad-right-6 {
+  padding-right: 50%;
+}
+
+.col-sm-7 {
+  float: left;
+  padding: 0 1%;
+  width: 58.33333%;
+}
+
+.col-sm-7:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-7:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-7 {
+  margin-left: 58.33333%;
+}
+
+.col-sm-offset-right-7 {
+  margin-right: 58.33333%;
+}
+
+.col-sm-pad-7 {
+  padding-left: 58.33333%;
+}
+
+.col-sm-pad-right-7 {
+  padding-right: 58.33333%;
+}
+
+.col-sm-8 {
+  float: left;
+  padding: 0 1%;
+  width: 66.66667%;
+}
+
+.col-sm-8:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-8:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-8 {
+  margin-left: 66.66667%;
+}
+
+.col-sm-offset-right-8 {
+  margin-right: 66.66667%;
+}
+
+.col-sm-pad-8 {
+  padding-left: 66.66667%;
+}
+
+.col-sm-pad-right-8 {
+  padding-right: 66.66667%;
+}
+
+.col-sm-9 {
+  float: left;
+  padding: 0 1%;
+  width: 75%;
+}
+
+.col-sm-9:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-9:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-9 {
+  margin-left: 75%;
+}
+
+.col-sm-offset-right-9 {
+  margin-right: 75%;
+}
+
+.col-sm-pad-9 {
+  padding-left: 75%;
+}
+
+.col-sm-pad-right-9 {
+  padding-right: 75%;
+}
+
+.col-sm-10 {
+  float: left;
+  padding: 0 1%;
+  width: 83.33333%;
+}
+
+.col-sm-10:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-10:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-10 {
+  margin-left: 83.33333%;
+}
+
+.col-sm-offset-right-10 {
+  margin-right: 83.33333%;
+}
+
+.col-sm-pad-10 {
+  padding-left: 83.33333%;
+}
+
+.col-sm-pad-right-10 {
+  padding-right: 83.33333%;
+}
+
+.col-sm-11 {
+  float: left;
+  padding: 0 1%;
+  width: 91.66667%;
+}
+
+.col-sm-11:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-11:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-11 {
+  margin-left: 91.66667%;
+}
+
+.col-sm-offset-right-11 {
+  margin-right: 91.66667%;
+}
+
+.col-sm-pad-11 {
+  padding-left: 91.66667%;
+}
+
+.col-sm-pad-right-11 {
+  padding-right: 91.66667%;
+}
+
+.col-sm-12, .project-list-item .title,
+.project-list-item .details, .project-list-item .pic, .contact .left-col, .contact .right-col, .contact button {
+  float: left;
+  padding: 0 1%;
+  width: 100%;
+  padding: 0;
+}
+
+.col-sm-12:first-of-type, .project-list-item .title:first-of-type,
+.project-list-item .details:first-of-type, .project-list-item .pic:first-of-type, .contact .left-col:first-of-type, .contact .right-col:first-of-type, .contact button:first-of-type {
+  padding-left: 0;
+}
+
+.col-sm-12:last-of-type, .project-list-item .title:last-of-type,
+.project-list-item .details:last-of-type, .project-list-item .pic:last-of-type, .contact .left-col:last-of-type, .contact .right-col:last-of-type, .contact button:last-of-type {
+  padding-left: 0;
+}
+
+.col-sm-offset-12 {
+  margin-left: 100%;
+}
+
+.col-sm-offset-right-12 {
+  margin-right: 100%;
+}
+
+.col-sm-pad-12 {
+  padding-left: 100%;
+}
+
+.col-sm-pad-right-12 {
+  padding-right: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-1 {
+    float: left;
+    padding: 0 1%;
+    width: 8.33333%;
+  }
+  .col-md-1:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-1:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .col-md-offset-right-1 {
+    margin-right: 8.33333%;
+  }
+  .col-md-pad-1, .col-10-pad, .col-8-10-pad, .project-list-item {
+    padding-left: 8.33333%;
+  }
+  .col-md-pad-right-1, .col-10-pad, .col-8-10-pad, .project-list-item {
+    padding-right: 8.33333%;
+  }
+  .col-md-2 {
+    float: left;
+    padding: 0 1%;
+    width: 16.66667%;
+  }
+  .col-md-2:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-2:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .col-md-offset-right-2 {
+    margin-right: 16.66667%;
+  }
+  .col-md-pad-2 {
+    padding-left: 16.66667%;
+  }
+  .col-md-pad-right-2 {
+    padding-right: 16.66667%;
+  }
+  .col-md-3 {
+    float: left;
+    padding: 0 1%;
+    width: 25%;
+  }
+  .col-md-3:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-3:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-3, .contact button {
+    margin-left: 25%;
+  }
+  .col-md-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-md-pad-3 {
+    padding-left: 25%;
+  }
+  .col-md-pad-right-3 {
+    padding-right: 25%;
+  }
+  .col-md-4 {
+    float: left;
+    padding: 0 1%;
+    width: 33.33333%;
+  }
+  .col-md-4:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-4:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .col-md-offset-right-4 {
+    margin-right: 33.33333%;
+  }
+  .col-md-pad-4 {
+    padding-left: 33.33333%;
+  }
+  .col-md-pad-right-4 {
+    padding-right: 33.33333%;
+  }
+  .col-md-5 {
+    float: left;
+    padding: 0 1%;
+    width: 41.66667%;
+  }
+  .col-md-5:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-5:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .col-md-offset-right-5 {
+    margin-right: 41.66667%;
+  }
+  .col-md-pad-5 {
+    padding-left: 41.66667%;
+  }
+  .col-md-pad-right-5 {
+    padding-right: 41.66667%;
+  }
+  .col-md-6, .project-list-item .title,
+  .project-list-item .details, .project-list-item .pic, .contact .left-col, .contact .right-col, .contact button {
+    float: left;
+    padding: 0 1%;
+    width: 50%;
+  }
+  .col-md-6:first-of-type, .project-list-item .title:first-of-type,
+  .project-list-item .details:first-of-type, .project-list-item .pic:first-of-type, .contact .left-col:first-of-type, .contact .right-col:first-of-type, .contact button:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-6:last-of-type, .project-list-item .title:last-of-type,
+  .project-list-item .details:last-of-type, .project-list-item .pic:last-of-type, .contact .left-col:last-of-type, .contact .right-col:last-of-type, .contact button:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .col-md-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-md-pad-6 {
+    padding-left: 50%;
+  }
+  .col-md-pad-right-6 {
+    padding-right: 50%;
+  }
+  .col-md-7 {
+    float: left;
+    padding: 0 1%;
+    width: 58.33333%;
+  }
+  .col-md-7:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-7:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .col-md-offset-right-7 {
+    margin-right: 58.33333%;
+  }
+  .col-md-pad-7 {
+    padding-left: 58.33333%;
+  }
+  .col-md-pad-right-7 {
+    padding-right: 58.33333%;
+  }
+  .col-md-8 {
+    float: left;
+    padding: 0 1%;
+    width: 66.66667%;
+  }
+  .col-md-8:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-8:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .col-md-offset-right-8 {
+    margin-right: 66.66667%;
+  }
+  .col-md-pad-8 {
+    padding-left: 66.66667%;
+  }
+  .col-md-pad-right-8 {
+    padding-right: 66.66667%;
+  }
+  .col-md-9 {
+    float: left;
+    padding: 0 1%;
+    width: 75%;
+  }
+  .col-md-9:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-9:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .col-md-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-md-pad-9 {
+    padding-left: 75%;
+  }
+  .col-md-pad-right-9 {
+    padding-right: 75%;
+  }
+  .col-md-10 {
+    float: left;
+    padding: 0 1%;
+    width: 83.33333%;
+  }
+  .col-md-10:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-10:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .col-md-offset-right-10 {
+    margin-right: 83.33333%;
+  }
+  .col-md-pad-10 {
+    padding-left: 83.33333%;
+  }
+  .col-md-pad-right-10 {
+    padding-right: 83.33333%;
+  }
+  .col-md-11 {
+    float: left;
+    padding: 0 1%;
+    width: 91.66667%;
+  }
+  .col-md-11:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-11:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .col-md-offset-right-11 {
+    margin-right: 91.66667%;
+  }
+  .col-md-pad-11 {
+    padding-left: 91.66667%;
+  }
+  .col-md-pad-right-11 {
+    padding-right: 91.66667%;
+  }
+  .col-md-12 {
+    float: left;
+    padding: 0 1%;
+    width: 100%;
+    padding: 0;
+  }
+  .col-md-12:first-of-type {
+    padding-left: 0;
+  }
+  .col-md-12:last-of-type {
+    padding-left: 0;
+  }
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+  .col-md-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-md-pad-12 {
+    padding-left: 100%;
+  }
+  .col-md-pad-right-12 {
+    padding-right: 100%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .col-lg-1 {
+    float: left;
+    padding: 0 1%;
+    width: 8.33333%;
+  }
+  .col-lg-1:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-1:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .col-lg-offset-right-1 {
+    margin-right: 8.33333%;
+  }
+  .col-lg-pad-1 {
+    padding-left: 8.33333%;
+  }
+  .col-lg-pad-right-1 {
+    padding-right: 8.33333%;
+  }
+  .col-lg-2 {
+    float: left;
+    padding: 0 1%;
+    width: 16.66667%;
+  }
+  .col-lg-2:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-2:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .col-lg-offset-right-2 {
+    margin-right: 16.66667%;
+  }
+  .col-lg-pad-2, .col-8-10-pad, .project-list-item, .contact {
+    padding-left: 16.66667%;
+  }
+  .col-lg-pad-right-2, .col-8-10-pad, .project-list-item, .contact {
+    padding-right: 16.66667%;
+  }
+  .col-lg-3 {
+    float: left;
+    padding: 0 1%;
+    width: 25%;
+  }
+  .col-lg-3:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-3:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-3, .contact button {
+    margin-left: 25%;
+  }
+  .col-lg-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-lg-pad-3 {
+    padding-left: 25%;
+  }
+  .col-lg-pad-right-3 {
+    padding-right: 25%;
+  }
+  .col-lg-4 {
+    float: left;
+    padding: 0 1%;
+    width: 33.33333%;
+  }
+  .col-lg-4:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-4:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .col-lg-offset-right-4 {
+    margin-right: 33.33333%;
+  }
+  .col-lg-pad-4 {
+    padding-left: 33.33333%;
+  }
+  .col-lg-pad-right-4 {
+    padding-right: 33.33333%;
+  }
+  .col-lg-5 {
+    float: left;
+    padding: 0 1%;
+    width: 41.66667%;
+  }
+  .col-lg-5:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-5:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .col-lg-offset-right-5 {
+    margin-right: 41.66667%;
+  }
+  .col-lg-pad-5 {
+    padding-left: 41.66667%;
+  }
+  .col-lg-pad-right-5 {
+    padding-right: 41.66667%;
+  }
+  .col-lg-6, .contact button {
+    float: left;
+    padding: 0 1%;
+    width: 50%;
+  }
+  .col-lg-6:first-of-type, .contact button:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-6:last-of-type, .contact button:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .col-lg-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-lg-pad-6 {
+    padding-left: 50%;
+  }
+  .col-lg-pad-right-6 {
+    padding-right: 50%;
+  }
+  .col-lg-7 {
+    float: left;
+    padding: 0 1%;
+    width: 58.33333%;
+  }
+  .col-lg-7:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-7:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .col-lg-offset-right-7 {
+    margin-right: 58.33333%;
+  }
+  .col-lg-pad-7 {
+    padding-left: 58.33333%;
+  }
+  .col-lg-pad-right-7 {
+    padding-right: 58.33333%;
+  }
+  .col-lg-8 {
+    float: left;
+    padding: 0 1%;
+    width: 66.66667%;
+  }
+  .col-lg-8:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-8:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .col-lg-offset-right-8 {
+    margin-right: 66.66667%;
+  }
+  .col-lg-pad-8 {
+    padding-left: 66.66667%;
+  }
+  .col-lg-pad-right-8 {
+    padding-right: 66.66667%;
+  }
+  .col-lg-9 {
+    float: left;
+    padding: 0 1%;
+    width: 75%;
+  }
+  .col-lg-9:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-9:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .col-lg-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-lg-pad-9 {
+    padding-left: 75%;
+  }
+  .col-lg-pad-right-9 {
+    padding-right: 75%;
+  }
+  .col-lg-10 {
+    float: left;
+    padding: 0 1%;
+    width: 83.33333%;
+  }
+  .col-lg-10:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-10:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .col-lg-offset-right-10 {
+    margin-right: 83.33333%;
+  }
+  .col-lg-pad-10 {
+    padding-left: 83.33333%;
+  }
+  .col-lg-pad-right-10 {
+    padding-right: 83.33333%;
+  }
+  .col-lg-11 {
+    float: left;
+    padding: 0 1%;
+    width: 91.66667%;
+  }
+  .col-lg-11:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-11:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .col-lg-offset-right-11 {
+    margin-right: 91.66667%;
+  }
+  .col-lg-pad-11 {
+    padding-left: 91.66667%;
+  }
+  .col-lg-pad-right-11 {
+    padding-right: 91.66667%;
+  }
+  .col-lg-12 {
+    float: left;
+    padding: 0 1%;
+    width: 100%;
+    padding: 0;
+  }
+  .col-lg-12:first-of-type {
+    padding-left: 0;
+  }
+  .col-lg-12:last-of-type {
+    padding-left: 0;
+  }
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+  .col-lg-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-lg-pad-12 {
+    padding-left: 100%;
+  }
+  .col-lg-pad-right-12 {
+    padding-right: 100%;
+  }
+}
+
+.center-content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/*
+  Colors
+*/
+.theme-a, .hero {
+  /*
+    BG:     Dark blue
+    Header: Orange
+    Font:   Light gray
+  */
+  color: #ededed;
+  background-color: rgba(27, 40, 54, 0.6);
+}
+
+.theme-a h1,
+.hero h1,
+.theme-a h2,
+.hero h2,
+.theme-a h3,
+.hero h3,
+.theme-a h4,
+.hero h4,
+.theme-a h5,
+.hero h5,
+.theme-a h6, .hero h6 {
+  color: #ff9900;
+}
+
+.theme-a a:link,
+.hero a:link,
+.theme-a a:visited,
+.hero a:visited,
+.theme-a a:hover,
+.hero a:hover,
+.theme-a a:active, .hero a:active {
+  color: #ff9900;
+}
+
+.theme-a a:link:hover,
+.hero a:link:hover,
+.theme-a a:link:active,
+.hero a:link:active,
+.theme-a a:visited:hover,
+.hero a:visited:hover,
+.theme-a a:visited:active,
+.hero a:visited:active,
+.theme-a a:hover:hover,
+.hero a:hover:hover,
+.theme-a a:hover:active,
+.hero a:hover:active,
+.theme-a a:active:hover,
+.hero a:active:hover,
+.theme-a a:active:active, .hero a:active:active {
+  color: #ffc266;
+}
+
+.theme-a input,
+.hero input,
+.theme-a textarea, .hero textarea {
+  color: #1b2836;
+}
+
+.theme-a button,
+.hero button,
+.theme-a .button, .hero .button {
+  background-color: rgba(255, 153, 0, 0.3);
+  border: none;
+  color: #ff9900;
+}
+
+.theme-a .logo, .hero .logo {
+  fill: #ff9900;
+  fill-opacity: 1;
+}
+
+.theme-a .icon, .hero .icon {
+  stroke: #ff9900;
+  stroke-width: 2;
+  fill-opacity: 0;
+}
+
+.theme-a .icon.small, .hero .icon.small {
+  stroke-width: 1;
+}
+
+.theme-b {
+  /*
+    BG:     Light gray
+    Header: Dark blue
+    Font:   Dark blue
+  */
+  color: #1b2836;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.theme-b h1,
+.theme-b h2,
+.theme-b h3,
+.theme-b h4,
+.theme-b h5,
+.theme-b h6 {
+  color: #415f81;
+}
+
+.theme-b a:link,
+.theme-b a:visited,
+.theme-b a:hover,
+.theme-b a:active {
+  color: #415f81;
+}
+
+.theme-b a:link:hover,
+.theme-b a:link:active,
+.theme-b a:visited:hover,
+.theme-b a:visited:active,
+.theme-b a:hover:hover,
+.theme-b a:hover:active,
+.theme-b a:active:hover,
+.theme-b a:active:active {
+  color: #7192b7;
+}
+
+.theme-b button,
+.theme-b .button {
+  background-color: rgba(65, 95, 129, 0.2);
+  border: none;
+  color: #415f81;
+}
+
+.theme-b .logo {
+  fill: #415f81;
+  fill-opacity: 1;
+}
+
+.theme-b .icon {
+  stroke: #415f81;
+  stroke-width: 2;
+  fill-opacity: 0;
+}
+
+.theme-b .icon.small {
+  stroke-width: 1;
+}
+
+.theme-c {
+  /*
+    BG:     Dark gray
+    Header: Orange
+    Font:   Light gray
+  */
+  color: #ededed;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.theme-c h1,
+.theme-c h2,
+.theme-c h3,
+.theme-c h4,
+.theme-c h5,
+.theme-c h6 {
+  color: #ff9900;
+}
+
+.theme-c a:link,
+.theme-c a:visited,
+.theme-c a:hover,
+.theme-c a:active {
+  color: #ff9900;
+}
+
+.theme-c a:link:hover,
+.theme-c a:link:active,
+.theme-c a:visited:hover,
+.theme-c a:visited:active,
+.theme-c a:hover:hover,
+.theme-c a:hover:active,
+.theme-c a:active:hover,
+.theme-c a:active:active {
+  color: #ffc266;
+}
+
+.theme-c button,
+.theme-c .button {
+  background-color: rgba(255, 153, 0, 0.3);
+  border: none;
+  color: #ff9900;
+}
+
+.theme-c .logo {
+  fill: #ff9900;
+  fill-opacity: 1;
+}
+
+.theme-c .icon {
+  stroke: #ff9900;
+  stroke-width: 2;
+  fill-opacity: 0;
+}
+
+.theme-c .icon.small {
+  stroke-width: 1;
+}
+
+.theme-d {
+  /*
+    BG:     Light gray
+    Header: Orange (1-2), Blue (3-6)
+    Font:   Dark blue
+  */
+  color: #1b2836;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.theme-d h1,
+.theme-d h2 {
+  color: #ff9900;
+}
+
+.theme-d h3,
+.theme-d h4,
+.theme-d h5,
+.theme-d h6 {
+  color: #415f81;
+}
+
+.theme-d a:link,
+.theme-d a:visited,
+.theme-d a:hover,
+.theme-d a:active {
+  color: #415f81;
+}
+
+.theme-d a:link:hover,
+.theme-d a:link:active,
+.theme-d a:visited:hover,
+.theme-d a:visited:active,
+.theme-d a:hover:hover,
+.theme-d a:hover:active,
+.theme-d a:active:hover,
+.theme-d a:active:active {
+  color: #7192b7;
+}
+
+.theme-d button,
+.theme-d .button {
+  background-color: rgba(65, 95, 129, 0.3);
+  border: none;
+  color: #415f81;
+}
+
+.theme-d .logo {
+  fill: #415f81;
+  fill-opacity: 1;
+}
+
+.theme-d .icon {
+  stroke: #415f81;
+  stroke-width: 2;
+  fill-opacity: 0;
+}
+
+.theme-d .icon.small {
+  stroke-width: 1;
+}
+
+/*
+  Fonts
+*/
+@font-face {
+  font-family: "BebasLight";
+  src: url("../fonts/BebasNeue-Light.woff");
+}
+
+@font-face {
+  font-family: "BebasBook";
+  src: url("../fonts/BebasNeue-Book.woff");
+}
+
+@font-face {
+  font-family: "BebasRegular";
+  src: url("../fonts/BebasNeue-Regular.woff");
+}
+
+/*
+  Text styles
+*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* H1, H2 are Bebas Book */
+h1,
+h2 {
+  font-family: "BebasBook";
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 90px;
+  letter-spacing: 15px;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 44px;
+  letter-spacing: 5px;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+/* H3-5 are Roboto Light */
+h3,
+h4,
+h5 {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  line-height: 34px;
+}
+
+section > h3 {
+  margin: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  font-family: "BebasRegular";
+  font-size: 24px;
+  letter-spacing: 6px;
+  font-weight: bold;
+}
+
+/* Input styles */
+input,
+textarea {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+input ::-webkit-input-placeholder,
+textarea ::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+input ::-moz-input-placeholder,
+textarea ::-moz-input-placeholder {
+  font-size: 15px;
+}
+
+input :-ms-input-placeholder,
+textarea :-ms-input-placeholder {
+  font-size: 15px;
+}
+
+textarea {
+  resize: none;
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 13px 0 8px 0;
+  font-family: "BebasRegular";
+  font-weight: bold;
+  letter-spacing: 6px;
+  font-size: 22px;
+}
+
+/*
+Project list item styles.
+
+These are shared between the project and case study list pages.
+*/
+.project-list-item {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 900px) {
+  .project-list-item {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project-list-item .title,
+  .project-list-item .details {
+    padding: 0 3% 0 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project-list-item .details p {
+    margin-top: 0;
+  }
+}
+
+.project-list-item .pic {
+  float: right;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .project-list-item .pic {
+    padding: 0 0 0 3%;
+  }
+}
+
+.project-list-item .pic img {
+  width: 60%;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (min-width: 768px) {
+  .project-list-item .pic img {
+    width: 100%;
+  }
+}
+
+.project-list-item h3 {
+  margin-top: 0;
+}
+
+.project-list-item .project-icons {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.project-list-item .project-icons li {
+  display: inline;
+  padding-right: 30px;
+}
+
+.project-list-item .icon {
+  width: 35px;
+  height: 35px;
+  stroke-width: 1;
+}
+
+/* Misc styles */
+.subtle:link,
+.subtle:visited,
+.subtle:hover,
+.subtle:active {
+  font-size: 14px;
+  color: rgba(128, 128, 128, 0.5);
+}
+
+.text-center, .icon-container {
+  text-align: center;
+}
+
+.nav-bar {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  float: right;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.nav-bar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-bar ul li:last-of-type {
+  margin-right: 0;
+}
+
+.nav-bar a:link,
+.nav-bar a:visited,
+.nav-bar a:hover,
+.nav-bar a:active {
+  color: #d4d4d4;
+  text-decoration: none;
+}
+
+.nav-bar a:link.current,
+.nav-bar a:visited.current,
+.nav-bar a:hover.current,
+.nav-bar a:active.current {
+  color: white;
+}
+
+.nav-bar a:link:hover,
+.nav-bar a:visited:hover,
+.nav-bar a:hover:hover,
+.nav-bar a:active:hover {
+  color: white;
+}
+
+.nav-bar .logo {
+  width: 30px;
+  height: 30px;
+}
+
+/* Hero Styles */
+.hero {
+  padding: 10px;
+}
+
+.hero h1 {
+  font-family: "BebasLight";
+  font-size: 30px;
+  color: white;
+  margin: 35px -15px 40px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero h1 {
+    font-size: 90px;
+  }
+}
+
+.hero h1 .soft {
+  margin: 0 -10px;
+  color: rgba(156, 156, 156, 0.4);
+}
+
+.hero h3 {
+  text-align: center;
+  color: white;
+}
+
+.hero h3 .rotator {
+  color: #ff9900;
+  margin-right: .3em;
+}
+
+/* Contact form styles */
+.contact {
+  padding-bottom: 40px;
+}
+
+.contact .right-col {
+  float: right;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  height: 40px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 530px) {
+  .contact input,
+  .contact textarea {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+  .contact input,
+  .contact textarea {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 9999px) {
+  .contact input:nth-of-type(2),
+  .contact textarea:nth-of-type(2) {
+    margin-top: 10px;
+  }
+}
+
+.contact textarea {
+  height: 90px;
+}
+
+.contact button {
+  height: 40px;
+  line-height: 45px;
+  margin-top: 20px;
+}
+
+.presence {
+  margin: 10px 0 30px 0;
+}
+
+.presence .title h3 {
+  float: left;
+  margin: 0;
+}
+
+.presence .title a {
+  float: right;
+}
+
+/* Project Details styles. */
+.project-skills {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project-skills .category-name {
+  display: inline-block;
+  width: 9em;
+  font-weight: 300;
+}
+
+.project-skills li {
+  margin-bottom: .5em;
+}
+
+.project-skills .category-skills {
+  list-style-type: none;
+  padding-left: 0;
+  display: inline-block;
+}
+
+.project-skills .category-skills li {
+  display: inline;
+  margin-right: .2em;
+}
+
+.project-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.project-links .project-link {
+  display: inline-block;
+  width: 10em;
+  margin-right: 1em;
+}
+
+.gallery-image {
+  text-align: center;
+}
+
+.gallery-image img {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6);
+  margin: 0 15px;
+}
+
+.back-nav {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.back-nav p {
+  margin: 10px 0 0 0;
+}
+
+.project-title {
+  padding-top: 10px;
+  padding-bottom: 1px;
+}
+
+/* Home styles */
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skills-list > li {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 230px;
+}
+
+@media only screen and (min-width: 768px) {
+  .skills-list > li {
+    width: 50%;
+  }
+}
+
+.skills-list h3 {
+  margin-top: .3em;
+  margin-bottom: .2em;
+}
+
+.icon-container {
+  height: 70px;
+}
+
+.icon-container .icon {
+  width: 60px;
+}
+
+.skill-items {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body {
+  background: url("/images/bg-poly-pattern.jpg") repeat;
+}
+
+body main > section {
+  padding: 10px;
+}

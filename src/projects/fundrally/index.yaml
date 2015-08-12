@@ -18,14 +18,8 @@ skillIcons:
 
 projectLinks:
   items:
-    - name: Gallery
-      href: '#gallery'
-
-    - name: View Live
-      href: http://claycarpenter.github.io/olympic-park/
-
-    - name: GitHub
-      href: http://github.com/claycarpenter/olympic-park/
+    - name: Case Study
+      href: /case-studies/olympic-park/
 
 intro:
   blurb: |
@@ -60,7 +54,7 @@ details:
     # Single image
     - _type: image
       _content:
-        imgSrc: 'http://loremflickr.com/320/240/dog'
+        imgSrc: 'http://lorempixel.com/g/400/200/nature'
         title: 'An image'
 
     # Paragraph
@@ -68,6 +62,16 @@ details:
       _content: |
         Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
 
+    # Single image
+    - _type: imageSet
+      _content:
+        items:
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
 
     # Paragraph
     - _type: paragraph
@@ -78,6 +82,7 @@ details:
     - _type: dyn
       _lang: jade
       _content: |
-        img(src='http://lorempixel.com/g/400/200/nature', title=title)
+        figure.gallery-image.single
+          img(src='http://lorempixel.com/g/400/200/nature', title=title)
 
 # Stop cutting my file short

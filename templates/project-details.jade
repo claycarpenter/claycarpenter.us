@@ -48,16 +48,16 @@ block content
           p= item._content
         
         when 'image'
-          figure.gallery-image.single
+          figure.gallery-image
             img(
               src=item._content.imgSrc
               title=item._content.title
             )
         
         when 'imageSet'
-          ul.image-set
+          figure.gallery-image
             each image in item._content.items
-              li: img(
+              img(
                 src=image.imgSrc
                 title=image.title
               )

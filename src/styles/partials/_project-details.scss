@@ -48,6 +48,7 @@
 
   img {
     box-shadow: 0 2px 6px 0 hsla(0, 0, 0, .6);
+    margin: 0 15px;
   }
 }
 
@@ -63,9 +64,4 @@
 .project-title {
   padding-top: 10px;
   padding-bottom: 1px;
-
-  h2 {
-    margin-bottom: 15px;
-    text-align: left;
-  }
 }

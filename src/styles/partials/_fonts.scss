@@ -71,6 +71,10 @@ h3 {
   font-size: 24px;
   letter-spacing: 1.5px;
   line-height: 34px;
+
+  section > & {
+    margin: 0;
+  }
 }
 
 a:link,

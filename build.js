@@ -10,7 +10,8 @@ var Metalsmith = require('metalsmith'),
     dynContentConverter = require('./dyn-content-converter'),
     filenames = require('metalsmith-filenames'),
     rename = require('metalsmith-rename'),
-    yargs = require('yargs');
+    yargs = require('yargs'),
+    debug = require('debug')('claycarpenter.us');
 
 // Define default values for CLI arguments.
 var defaultArgValues = {
@@ -134,14 +135,12 @@ function listPage (files, metalsmith, done) {
 
 function spy () {
   return function (files, metalsmith, done) {
-    console.log(Object.keys(files));
+    debug(Object.keys(files));
 
     Object.keys(files).forEach(function (fileKey) {
       var file = files[fileKey];
 
-      // console.log(Object.keys(file));
-      // console.log(JSON.stringify(file));
-      console.log(file.contents.toString());
+      debug(file.contents.toString());
     });
 
     done();
@@ -152,10 +151,10 @@ function collectionsSpy () {
   return function (files, metalsmith, done) {
     var metadata = metalsmith.metadata();
 
-    console.log('Case Studies:', metadata.caseStudies.length);
-    console.log(metadata.caseStudies);
-    console.log('Projects:', metadata.projects.length);
-    console.log(metadata.projects);
+    debug('Case Studies:', metadata.caseStudies.length);
+    debug(metadata.caseStudies);
+    debug('Projects:', metadata.projects.length);
+    debug(metadata.projects);
 
     done();
   }

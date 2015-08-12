@@ -21,22 +21,11 @@ intro:
   blurb: |
     Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
 
-skillIcons:
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
-  - imgSrc: /images/skill-icons/something.svg
-    name: User Experience
-
 heroBgImage:
   imgSrc: /images/case-studies/olympic-park/hero-blurred.jpg
 
 projectLinks:
   items:
-    - name: Gallery
-      href: '#gallery'
-
     - name: View Live
       href: http://claycarpenter.github.io/olympic-park/
 
@@ -56,8 +45,6 @@ myRole:
     Informal economies Global South Arab Spring enable marginalized communities. Donors, investment global network advocate employment; inclusive capitalism best practices.
 
 process:
-  # How does markup fit in here? Just have to write it out? Otherwise,
-  # it's hard to add inline links, etc...
   items:
     # Paragraph
     - _type: paragraph
@@ -67,7 +54,7 @@ process:
     # Single image
     - _type: image
       _content:
-        imgSrc: 'http://loremflickr.com/320/240/dog'
+        imgSrc: 'http://lorempixel.com/g/400/200/nature'
         title: 'An image'
 
     # Paragraph
@@ -75,21 +62,16 @@ process:
       _content: |
         Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
 
-    # Paragraph
-    - _type: paragraph
-      _content: |
-        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
-
-    # Set of images
+    # Single image
     - _type: imageSet
       _content:
         items:
-          - imgSrc: 'http://lorempixel.com/g/400/200/nature'
-            title: 'An image'
-          - imgSrc: 'http://lorempixel.com/g/400/200/nature'
-            title: 'An image'
-          - imgSrc: 'http://lorempixel.com/g/400/200/nature'
-            title: 'An image'
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
 
     # Paragraph
     - _type: paragraph
@@ -100,21 +82,7 @@ process:
     - _type: dyn
       _lang: jade
       _content: |
-        ul
-          - var somethings = [1,2,3,4,5];
-          each something in somethings
-            li: b= something
-
-    # Paragraph
-    - _type: dyn
-      _lang: jade
-      _content: |
-        img(src='http://lorempixel.com/g/400/200/nature', title=title)
-
-    # Paragraph
-    - _type: dyn
-      _lang: jade
-      _content: |
-        img(src='http://lorempixel.com/g/400/200/nature', title='An image')
+        figure.gallery-image.single
+          img(src='http://lorempixel.com/g/400/200/nature', title=title)
 
 # Stop cutting my file short

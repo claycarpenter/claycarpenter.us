@@ -35,3 +35,27 @@ mixin projectListBuilder(projectList, buttonLabel)
               +skillIconBuilder(skillIcon.shortName)
               
         a.button(href='/' + project.path)= buttonLabel
+
+mixin dynContent(items)
+  each item in items
+    case item._type
+      when 'paragraph'
+        p= item._content
+      
+      when 'image'
+        figure.gallery-image
+          img(
+            src=item._content.imgSrc
+            title=item._content.title
+          )
+      
+      when 'imageSet'
+        figure.gallery-image
+          each image in item._content.items
+            img(
+              src=image.imgSrc
+              title=image.title
+            )
+            
+      when 'dyn'
+        div !{ item.content }

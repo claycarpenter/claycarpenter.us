@@ -1,60 +1,42 @@
-extends /_layout.jade
+extends /_short-hero.jade
 
 block hero
   .hero
-    img.hero-blurred(src=heroBgImage.imgSrc)
-    
-    h1 #{title}
- 
+    h1 Projects
+
 block content
-  p.back-nav
-    a(href='/case-studies/') Back to Case Studies
+  .back-nav.col-8-10-pad.theme-b
+    p
+      a.subtle(href='/case-studies/') &lt; Back to Case Studies
+  
+  .project-title.col-8-10-pad.theme-d
+    h2= title
     
-  section.links
+  section.col-8-10-pad.theme-b
     ul.project-links
       each link in projectLinks.items
-        li
+        li.project-link
           a.button(
             href=link.href
             title=link.name
           )= link.name
     
-  section.problem
-    h1 Problem
+  section.col-8-10-pad.theme-b
+    h3 Problem
     
     p= problem.blurb
     
-  section.solution
-    h1 Solution
+  section.col-8-10-pad.theme-b
+    h3 Solution
     
     p= solution.blurb
     
-  section.my-role
-    h1 My Role
+  section.col-8-10-pad.theme-b
+    h3 My Role
     
     p= myRole.blurb
     
-  section.process
-    h1 Process
+  section.col-8-10-pad.theme-b
+    h3 Process
 
-    each item in process.items
-      case item._type
-        when 'paragraph'
-          p= item._content
-        
-        when 'image'
-          img(
-            src=item._content.imgSrc
-            title=item._content.title
-          )
-        
-        when 'imageSet'
-          ul.image-set
-            each image in item._content.items
-              li: img(
-                src=image.imgSrc
-                title=image.title
-              )
-              
-        when 'dyn'
-          div !{ item.content }
+    +dynContent(process.items)

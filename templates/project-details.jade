@@ -42,25 +42,4 @@ block content
   section.col-8-10-pad.theme-b
     h3 Details
 
-    each item in details.items
-      case item._type
-        when 'paragraph'
-          p= item._content
-        
-        when 'image'
-          figure.gallery-image
-            img(
-              src=item._content.imgSrc
-              title=item._content.title
-            )
-        
-        when 'imageSet'
-          figure.gallery-image
-            each image in item._content.items
-              img(
-                src=image.imgSrc
-                title=image.title
-              )
-              
-        when 'dyn'
-          div !{ item.content }
+    +dynContent(details.items)

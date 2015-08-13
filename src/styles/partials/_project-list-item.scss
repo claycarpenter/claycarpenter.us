@@ -4,7 +4,7 @@ Project list item styles.
 These are shared between the project and case study list pages.
 */
 
-.project-list-item {
+section.project-list-item {
   @extend .col-lg-pad-2, .col-lg-pad-right-2, .col-md-pad-1, .col-md-pad-right-1;
 
   $padding: 40px;
@@ -16,7 +16,15 @@ These are shared between the project and case study list pages.
       padding-top: $padding;
       padding-bottom: $padding;
   }
+}
 
+li.project-list-item {
+  @extend .container;
+
+  list-style-type: none;
+}
+
+.project-list-item {
   .title,
   .details {
     @extend .col-md-6, .col-sm-12;

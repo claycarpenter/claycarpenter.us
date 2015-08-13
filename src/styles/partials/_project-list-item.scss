@@ -43,8 +43,10 @@ li.project-list-item {
   .pic {
     @extend .col-md-6, .col-sm-12;
 
+    padding: 0 1% 1% 1%;
+
     @include respond-to(medium) {
-      padding: 0 0 0 3%;
+      padding: 0 1% 1% 3%;
     }
 
     float: right;

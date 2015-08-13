@@ -1,0 +1,9 @@
+<svg width="29" height="40" viewBox="0 0 29 40" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    Next
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <path fill-opacity=".99" fill="#F90" d="M29 20L0 .5v39"/>
+    <path fill-opacity=".2" fill="#000" d="M29 20H0v19.5"/>
+  </g>
+</svg>

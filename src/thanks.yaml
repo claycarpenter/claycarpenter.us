@@ -1,0 +1,13 @@
+---
+# Page Metadata
+title: Contact
+template: /thanks.jade
+datePublished: "???"
+draft: false
+navPage: Contact
+
+# Page Content
+thanks:
+  title: Thanks For Contacting Me
+  content: |
+    I appreciate you reaching out to me. I'll get back to you shortly to follow up on your message.

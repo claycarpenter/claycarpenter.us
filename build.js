@@ -46,6 +46,7 @@ var browserSyncOptions = {
         'src/**/*.yaml', // YAML Posts
         'templates/**/*.jade',   // Jade templates
         'src/**/*.scss', // Sass
+        'src/**/*.js', // Scripts
         'static/**/*' // Static files
     ],
     port: cliArgs.port,

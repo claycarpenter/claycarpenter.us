@@ -67,29 +67,34 @@ html
             a(name='contact')
             h2 Say Hello
             
-            .left-col
-              input(
-                type='text'
-                name='name'
-                placeholder='Name')
-                
-              input(
-                type='text'
-                name='email'
-                placeholder='Email')
-            
-            .right-col
-              textarea(
-                type='text'
-                name='message'
-                placeholder='Message')
+            form(
+              accept-charset="UTF-8"
+              action="https://formkeep.com/f/194abc32c303"
+              method="POST")
+              
+              input(type="hidden" name="utf8" value="✓")
+              
+              .left-col
+                input(
+                  type='text'
+                  name='name'
+                  placeholder='Name')
+                  
+                input(
+                  type='text'
+                  name='email'
+                  placeholder='Email')
+              
+              .right-col
+                textarea(
+                  name='message'
+                  placeholder='Message')
 
-            a.button#contactSubmit(href='#0', title='Submit') Submit
+              button.button(type='Submit') Submit
 
         footer.theme-a
           //- Footer links
           +navBar(links)
-    
     
     script(src='/scripts/jQuery-2.1.4.min.js')
     

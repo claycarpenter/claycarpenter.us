@@ -33,3 +33,44 @@
 .skill-items {
   @include plain-list;
 }
+
+.slide-controls {
+  @extend .container;
+  position: relative;
+
+  height: 50px;
+  margin-top: 15px;
+
+  .rslides_here {
+    font-weight: bold;
+  }
+
+  .rslides_tabs {
+    @include plain-list;
+
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    left: 0; right: 0; top: 0;
+
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+
+  .rslides_nav {
+    &.prev {
+      position: absolute;
+      left: 0;
+    }
+
+    &.next {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

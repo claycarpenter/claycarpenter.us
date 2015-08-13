@@ -752,7 +752,7 @@ body main > section:after,
 }
 
 .col-sm-12, .project-list-item .title,
-.project-list-item .details, .project-list-item .pic, .contact .left-col, .contact .right-col, .contact button {
+.project-list-item .details, .project-list-item .pic, .contact .left-col, .contact .right-col, .contact .button {
   float: left;
   padding: 0 1%;
   width: 100%;
@@ -760,12 +760,12 @@ body main > section:after,
 }
 
 .col-sm-12:first-of-type, .project-list-item .title:first-of-type,
-.project-list-item .details:first-of-type, .project-list-item .pic:first-of-type, .contact .left-col:first-of-type, .contact .right-col:first-of-type, .contact button:first-of-type {
+.project-list-item .details:first-of-type, .project-list-item .pic:first-of-type, .contact .left-col:first-of-type, .contact .right-col:first-of-type, .contact .button:first-of-type {
   padding-left: 0;
 }
 
 .col-sm-12:last-of-type, .project-list-item .title:last-of-type,
-.project-list-item .details:last-of-type, .project-list-item .pic:last-of-type, .contact .left-col:last-of-type, .contact .right-col:last-of-type, .contact button:last-of-type {
+.project-list-item .details:last-of-type, .project-list-item .pic:last-of-type, .contact .left-col:last-of-type, .contact .right-col:last-of-type, .contact .button:last-of-type {
   padding-left: 0;
 }
 
@@ -843,7 +843,7 @@ body main > section:after,
   .col-md-3:last-of-type {
     padding-left: 0;
   }
-  .col-md-offset-3, .contact button {
+  .col-md-offset-3, .contact .button {
     margin-left: 25%;
   }
   .col-md-offset-right-3 {
@@ -902,17 +902,17 @@ body main > section:after,
     padding-right: 41.66667%;
   }
   .col-md-6, .project-list-item .title,
-  .project-list-item .details, .project-list-item .pic, .contact .left-col, .contact .right-col, .contact button {
+  .project-list-item .details, .project-list-item .pic, .contact .left-col, .contact .right-col, .contact .button {
     float: left;
     padding: 0 1%;
     width: 50%;
   }
   .col-md-6:first-of-type, .project-list-item .title:first-of-type,
-  .project-list-item .details:first-of-type, .project-list-item .pic:first-of-type, .contact .left-col:first-of-type, .contact .right-col:first-of-type, .contact button:first-of-type {
+  .project-list-item .details:first-of-type, .project-list-item .pic:first-of-type, .contact .left-col:first-of-type, .contact .right-col:first-of-type, .contact .button:first-of-type {
     padding-left: 0;
   }
   .col-md-6:last-of-type, .project-list-item .title:last-of-type,
-  .project-list-item .details:last-of-type, .project-list-item .pic:last-of-type, .contact .left-col:last-of-type, .contact .right-col:last-of-type, .contact button:last-of-type {
+  .project-list-item .details:last-of-type, .project-list-item .pic:last-of-type, .contact .left-col:last-of-type, .contact .right-col:last-of-type, .contact .button:last-of-type {
     padding-left: 0;
   }
   .col-md-offset-6 {
@@ -1126,7 +1126,7 @@ body main > section:after,
   .col-lg-3:last-of-type {
     padding-left: 0;
   }
-  .col-lg-offset-3, .contact button {
+  .col-lg-offset-3, .contact .button {
     margin-left: 25%;
   }
   .col-lg-offset-right-3 {
@@ -1184,15 +1184,15 @@ body main > section:after,
   .col-lg-pad-right-5 {
     padding-right: 41.66667%;
   }
-  .col-lg-6, .contact button {
+  .col-lg-6, .contact .button {
     float: left;
     padding: 0 1%;
     width: 50%;
   }
-  .col-lg-6:first-of-type, .contact button:first-of-type {
+  .col-lg-6:first-of-type, .contact .button:first-of-type {
     padding-left: 0;
   }
-  .col-lg-6:last-of-type, .contact button:last-of-type {
+  .col-lg-6:last-of-type, .contact .button:last-of-type {
     padding-left: 0;
   }
   .col-lg-offset-6 {
@@ -1693,13 +1693,6 @@ a:active {
   text-decoration: none;
 }
 
-button {
-  font-family: "BebasRegular";
-  font-size: 24px;
-  letter-spacing: 6px;
-  font-weight: bold;
-}
-
 /* Input styles */
 input,
 textarea {
@@ -1945,9 +1938,8 @@ These are shared between the project and case study list pages.
   height: 90px;
 }
 
-.contact button {
-  height: 40px;
-  line-height: 45px;
+.contact .button {
+  padding: 13px 0 8px 0;
   margin-top: 20px;
 }
 

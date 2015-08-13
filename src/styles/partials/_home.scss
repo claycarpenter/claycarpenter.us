@@ -34,6 +34,14 @@
   @include plain-list;
 }
 
+.rslides .project-list-item {
+  height: 580px;
+
+  @include respond-to(medium) {
+    height: 390px;
+  }
+}
+
 .slide-controls {
   @extend .container;
   position: relative;

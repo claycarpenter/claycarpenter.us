@@ -33,10 +33,17 @@ block content
     h2= showcases.title
     
     ul
-      each showcase in showcases.items
+      each project in showcases.items
         li
-          h3= showcase.name
-          
-          p= showcase.blurb
-          
-          a.button(href=showcase.link.href, title='Learn More') Learn More
+          .project-list-item
+            
+            .title
+              h3= project.title
+              
+            .pic
+              img(src=project.listImage.imgSrc, title=project.title)
+            
+            .details
+              p= project.intro.blurb
+                    
+              a.button(href='/' + project.filename) Learn More

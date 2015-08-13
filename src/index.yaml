@@ -50,14 +50,18 @@ skills:
 showcases:
   title: Recent Work
   items:
-    - name: Olympic Park Showcase
-      blurb: |
-        Oxfam sustainable women and children environmental affiliate. International developing citizenry, support philanthropy nutrition carbon emissions reductions Andrew Carnegie. Donate accelerate, dedicated global, advancement.
-      link:
-          href: /projects/olympic-park.html
-      photo:
-        imgSrc: /assets/images/home/showcase-olympic-park.jpg
-        alt: Olympic Park Showcase
-      icons:
-        - imgSrc: /assets/skill-icons/development-small-orange.jpg
-          alt: Development
+    - title: Olympic National Park Camping Showcase
+      filename: projects/olympic-park/index.html
+      intro:
+        blurb: |
+          Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
+      listImage:
+        imgSrc: /projects/olympic-park/thumb.jpg
+
+    - title: FundRally
+      filename: projects/fundrally/index.html
+      intro:
+        blurb: |
+          Recognition Action Against Hunger, harness public sector, safety global leaders. Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
+      listImage:
+        imgSrc: /projects/fundrally/thumb.jpg

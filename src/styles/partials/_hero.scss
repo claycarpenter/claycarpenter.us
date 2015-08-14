@@ -4,6 +4,11 @@
   @extend .theme-a;
 
   padding: 10px;
+  padding-bottom: 30px;
+
+  @include respond-to(medium) {
+    padding-bottom: 40px;
+  }
 
   hgroup {
     @extend .container;

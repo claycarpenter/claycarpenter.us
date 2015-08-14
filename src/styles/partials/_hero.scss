@@ -3,8 +3,7 @@
 .hero {
   @extend .theme-a;
 
-  padding: 10px;
-  padding-bottom: 30px;
+  padding: 80px 10px 30px 10px;
 
   @include respond-to(medium) {
     padding-bottom: 40px;

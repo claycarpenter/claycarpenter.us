@@ -30,8 +30,9 @@ doctype html
 
 mixin navBar(links)
   .nav-bar
-    svg.logo(viewBox="0 0 35 35")
-      include ../src/images/logo.svg
+    a(href='/', title='Home')
+      svg.logo(viewBox="0 0 35 35")
+        include ../src/images/logo.svg
     
     ul
       each link in links

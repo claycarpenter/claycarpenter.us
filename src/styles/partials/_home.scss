@@ -35,10 +35,10 @@
 }
 
 .rslides .project-list-item {
-  height: 650px;
+  height: 670px;
 
   @include respond-to(medium) {
-    height: 400px;
+    height: 420px;
   }
 }
 

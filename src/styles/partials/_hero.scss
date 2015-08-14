@@ -5,9 +5,24 @@
 
   padding: 10px;
 
+  hgroup {
+    @extend .container;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    @include respond-to(medium) {
+      margin-top: 30px;
+    }
+  }
+
   h1 {
+    display: inline;
+
     font-family: "BebasLight";
-    font-size: 30px;
+    font-size: 45px;
+    line-height: 50px;
 
     @include respond-to(medium) {
       font-size: 90px;
@@ -18,9 +33,8 @@
     // Negative right marging compensates for letter-spacing padding.
     margin: 35px -15px 40px 0;
 
-    .soft {
-      margin: 0 -10px;
-      color: hsla(0, 0, 61, .4);
+    &.soft {
+      color: hsla(0, 0, 61, .5);
     }
   }
 

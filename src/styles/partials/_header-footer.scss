@@ -19,7 +19,12 @@
 
   .background {
     background-color: $dark-blue;
-    opacity: .4;
+    opacity: 0;
+    transition: opacity 1s;
+
+    &.dark {
+      opacity: .6;
+    }
   }
 
   .content {

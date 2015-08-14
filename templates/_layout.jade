@@ -98,7 +98,7 @@ html
 
         footer.theme-a
           //- Footer links
-          +navBar(links)
+          //- +navBar(links)
     
     script(src='/scripts/vendor/jquery-2.1.4.min.js')
     script(src='/scripts/vendor/responsiveslides.js')
@@ -110,6 +110,16 @@ html
           pager: true,
           nav: true,
           navContainer: '.slide-controls'
+        });
+        
+        var navHeaderBg = $('.nav-bar .background'),
+            changeClass = 'dark';
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            navHeaderBg.addClass(changeClass);
+          } else {
+            navHeaderBg.removeClass(changeClass);
+          }
         });
       });
     

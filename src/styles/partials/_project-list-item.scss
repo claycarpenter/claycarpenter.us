@@ -53,7 +53,7 @@ li.project-list-item {
     text-align: center;
 
     img {
-      width: 60%;
+      width: 80%;
       box-shadow: 0 2px 6px 0 hsla(0, 0, 0, .6);
 
       @include respond-to(medium) {

@@ -22,7 +22,7 @@
   .background {
     background-color: $dark-blue;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity .5s;
 
     &.dark {
       opacity: .6;
@@ -31,12 +31,20 @@
 
   .content {
     padding: 10px;
+    text-align: center;
   }
 
   ul {
+    display: none;
+    float: none;
+
+    @include respond-to(medium) {
+      display: block;
+      float: right;
+    }
+
     list-style-type: none;
 
-    float: right;
 
     margin-top: 4px;
     margin-bottom: 0;
@@ -50,6 +58,27 @@
         margin-right: 0;
       }
     }
+  }
+
+  &.open-menu {
+    height: 270px;
+
+    .background {
+        opacity: .9;
+    }
+
+    ul {
+      display: inline;
+
+      margin-top: 30px;
+
+      li {
+        display: list-item;
+        margin: 15px;
+      }
+    }
+
+    font-size: 18px;
   }
 
   font-size: 15px;
@@ -71,9 +100,28 @@
     }
   }
 
+  $size: 30px;
+
+  .logo,
+  .nav-icon {
+    position: absolute;
+    top: 10px;
+
+    svg {
+      width: $size;
+      height: $size;
+    }
+  }
+
   .logo {
-    $size: 30px;
-    width: $size;
-    height: $size;
+    left: 10px;
+  }
+
+  .nav-icon {
+    right: 10px;
+
+    @include respond-to(medium) {
+      display: none;
+    }
   }
 }

@@ -33,14 +33,18 @@ mixin navBar(links)
     .background
     
     .content 
-      a(href='/', title='Home')
-        svg.logo(viewBox="0 0 35 35")
+      a.logo(href='/', title='Home')
+        svg(viewBox="0 0 35 35")
           include ../src/images/logo.svg
       
       ul
         each link in links
           li
             a(href=link.href, title=link.title, class={current: link.title === navPage})= link.title
+            
+      a.nav-icon(href='#0', title='Navigation Menu')
+        svg(viewBox="0 0 35 35")
+          include ../src/images/nav-icon.svg
 
 html
     head
@@ -120,6 +124,16 @@ html
           } else {
             navHeaderBg.removeClass(changeClass);
           }
+        });
+        
+        // Toggle dropdown nav visibility on click.
+        $('.nav-icon').on('click', function (event) {
+          event.preventDefault();
+          $('.nav-bar').toggleClass('open-menu');
+        });
+
+        $('.nav-options a').on('click', function (event) {
+          $('.nav-bar').removeClass('open-menu');
         });
       });
     

@@ -100,9 +100,12 @@ html
 
               button.button(type='Submit') Submit
 
-        footer.theme-a
-          //- Footer links
-          //- +navBar(links)
+        footer.theme-a.text-center
+          .logo(href='/', title='Home')
+            svg(width="200" height="200" viewBox="0 0 35 35")
+              include ../src/images/logo.svg
+              
+          h2 Clay Carpenter
     
     script(src='/scripts/vendor/jquery-2.1.4.min.js')
     script(src='/scripts/vendor/responsiveslides.js')

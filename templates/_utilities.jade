@@ -45,10 +45,10 @@ mixin dynContent(items)
       when 'image'
         figure.gallery-image
           img(
-            src=image.imgSrc
-            title=image.title
-            width=image.width
-            height=image.height
+            src=item._content.imgSrc
+            title=item._content.title
+            width=item._content.width
+            height=item._content.height
           )
           figcaption= item._content.caption
       

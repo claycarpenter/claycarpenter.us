@@ -10,7 +10,7 @@ navPage: Projects
 # Page Content
 
 listImage:
-  imgSrc: /projects/fundrally/thumb.jpg
+  imgSrc: /projects/fundrally/images/thumb.jpg
 
 skillIcons:
   - shortName: ux
@@ -66,12 +66,12 @@ details:
     - _type: imageSet
       _content:
         items:
-            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-              title: 'An image'
-            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-              title: 'An image'
-            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-              title: 'An image'
+          - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+            title: 'An image'
+          - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+            title: 'An image'
+          - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+            title: 'An image'
 
     # Paragraph
     - _type: paragraph

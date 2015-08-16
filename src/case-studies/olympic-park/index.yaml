@@ -61,12 +61,12 @@ process:
       _content:
         caption: Sea stacks and the logo they inspired.
         items:
-            - imgSrc: '/case-studies/olympic-park/images/sea-stacks.jpg'
-              title: 'Sea stacks'
-              width: 300
-            - imgSrc: '/case-studies/olympic-park/images/logo.jpg'
-              title: 'Olympic National Park logo'
-              width: 200
+          - imgSrc: '/case-studies/olympic-park/images/sea-stacks.jpg'
+            title: 'Sea stacks'
+            width: 300
+          - imgSrc: '/case-studies/olympic-park/images/logo.jpg'
+            title: 'Olympic National Park logo'
+            width: 200
 
     - _type: dyn
       _lang: jade
@@ -79,12 +79,12 @@ process:
       _content:
         caption: Two early iterations, captured in style tiles.
         items:
-            - imgSrc: '/case-studies/olympic-park/images/early-design/sea-stacks.jpg'
-              title: 'Sea stacks design'
-              width: 250
-            - imgSrc: '/case-studies/olympic-park/images/early-design/mountains.jpg'
-              title: 'Mountains design'
-              width: 250
+          - imgSrc: '/case-studies/olympic-park/images/early-design/sea-stacks.jpg'
+            title: 'Sea stacks design'
+            width: 250
+          - imgSrc: '/case-studies/olympic-park/images/early-design/mountains.jpg'
+            title: 'Mountains design'
+            width: 250
 
     - _type: dyn
       _lang: jade
@@ -97,14 +97,14 @@ process:
       _content:
         caption: The final implementation, in desktop, tablet, and mobile widths.
         items:
-            - imgSrc: '/case-studies/olympic-park/images/final-design/desktop.jpg'
-              title: 'Desktop'
-              width: 200
-            - imgSrc: '/case-studies/olympic-park/images/final-design/tablet.jpg'
-              title: 'Table'
-              width: 150
-            - imgSrc: '/case-studies/olympic-park/images/final-design/mobile.jpg'
-              title: 'Mobile'
-              width: 100
+          - imgSrc: '/case-studies/olympic-park/images/final-design/desktop.jpg'
+            title: 'Desktop'
+            width: 200
+          - imgSrc: '/case-studies/olympic-park/images/final-design/tablet.jpg'
+            title: 'Table'
+            width: 150
+          - imgSrc: '/case-studies/olympic-park/images/final-design/mobile.jpg'
+            title: 'Mobile'
+            width: 100
 
 # Stop cutting my file short

@@ -396,18 +396,52 @@ th {
   padding: 0;
 }
 
+/*! http://responsiveslides.com v1.54 by @viljamis */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  height: auto;
+  width: 100%;
+  border: 0;
+}
+
 /*
   Basic grid foundation.
 */
-.container, .nav-bar, .contact, .presence .title, body main > section {
+.container, li.project-list-item, .nav-bar, .hero hgroup, .contact, .presence .title, .slide-controls, body main > section {
   width: auto;
   margin: 0 auto;
 }
 
 .container:after,
+li.project-list-item:after,
 .nav-bar:after,
+.hero hgroup:after,
 .contact:after,
 .presence .title:after,
+.slide-controls:after,
 body main > section:after,
 .row:after {
   content: "";
@@ -803,10 +837,10 @@ body main > section:after,
   .col-md-offset-right-1 {
     margin-right: 8.33333%;
   }
-  .col-md-pad-1, .col-10-pad, .col-8-10-pad, .project-list-item {
+  .col-md-pad-1, .col-10-pad, .col-8-10-pad, section.project-list-item {
     padding-left: 8.33333%;
   }
-  .col-md-pad-right-1, .col-10-pad, .col-8-10-pad, .project-list-item {
+  .col-md-pad-right-1, .col-10-pad, .col-8-10-pad, section.project-list-item {
     padding-right: 8.33333%;
   }
   .col-md-2 {
@@ -1109,10 +1143,10 @@ body main > section:after,
   .col-lg-offset-right-2 {
     margin-right: 16.66667%;
   }
-  .col-lg-pad-2, .col-8-10-pad, .project-list-item, .contact {
+  .col-lg-pad-2, .col-8-10-pad, section.project-list-item, .contact {
     padding-left: 16.66667%;
   }
-  .col-lg-pad-right-2, .col-8-10-pad, .project-list-item, .contact {
+  .col-lg-pad-right-2, .col-8-10-pad, section.project-list-item, .contact {
     padding-right: 16.66667%;
   }
   .col-lg-3 {
@@ -1351,6 +1385,7 @@ body main > section:after,
 .center-content {
   max-width: 1024px;
   margin: 0 auto;
+  position: relative;
 }
 
 /*
@@ -1422,7 +1457,9 @@ body main > section:after,
   color: #ff9900;
 }
 
-.theme-a .logo, .hero .logo {
+.theme-a .logo,
+.hero .logo,
+.theme-a .nav-icon, .hero .nav-icon {
   fill: #ff9900;
   fill-opacity: 1;
 }
@@ -1686,6 +1723,12 @@ section > h3 {
   margin: 0;
 }
 
+h4 {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  line-height: 28px;
+}
+
 a:link,
 a:visited,
 a:hover,
@@ -1735,16 +1778,20 @@ Project list item styles.
 
 These are shared between the project and case study list pages.
 */
-.project-list-item {
+section.project-list-item {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 900px) {
-  .project-list-item {
+  section.project-list-item {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+}
+
+li.project-list-item {
+  list-style-type: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1761,18 +1808,19 @@ These are shared between the project and case study list pages.
 }
 
 .project-list-item .pic {
+  padding: 0 1% 1% 1%;
   float: right;
   text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   .project-list-item .pic {
-    padding: 0 0 0 3%;
+    padding: 0 1% 1% 3%;
   }
 }
 
 .project-list-item .pic img {
-  width: 60%;
+  width: 80%;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6);
 }
 
@@ -1817,16 +1865,52 @@ These are shared between the project and case study list pages.
 }
 
 .nav-bar {
-  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  z-index: 100;
+  height: 50px;
   font-size: 15px;
   font-weight: 300;
 }
 
+.nav-bar .background,
+.nav-bar .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar .background {
+  background-color: #1b2836;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.nav-bar .background.dark {
+  opacity: .8;
+}
+
+.nav-bar .content {
+  padding: 10px;
+  text-align: center;
+}
+
 .nav-bar ul {
+  display: none;
+  float: none;
   list-style-type: none;
-  float: right;
-  margin-top: 8px;
+  margin-top: 4px;
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-bar ul {
+    display: block;
+    float: right;
+  }
 }
 
 .nav-bar ul li {
@@ -1836,6 +1920,25 @@ These are shared between the project and case study list pages.
 
 .nav-bar ul li:last-of-type {
   margin-right: 0;
+}
+
+.nav-bar.open-menu {
+  height: 270px;
+  font-size: 18px;
+}
+
+.nav-bar.open-menu .background {
+  opacity: .9;
+}
+
+.nav-bar.open-menu ul {
+  display: inline;
+  margin-top: 30px;
+}
+
+.nav-bar.open-menu ul li {
+  display: list-item;
+  margin: 15px;
 }
 
 .nav-bar a:link,
@@ -1860,19 +1963,59 @@ These are shared between the project and case study list pages.
   color: white;
 }
 
-.nav-bar .logo {
+.nav-bar .logo,
+.nav-bar .nav-icon {
+  position: absolute;
+  top: 10px;
+}
+
+.nav-bar .logo svg,
+.nav-bar .nav-icon svg {
   width: 30px;
   height: 30px;
 }
 
+.nav-bar .logo {
+  left: 10px;
+}
+
+.nav-bar .nav-icon {
+  right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-bar .nav-icon {
+    display: none;
+  }
+}
+
 /* Hero Styles */
 .hero {
-  padding: 10px;
+  padding: 80px 10px 30px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 40px;
+  }
+}
+
+.hero hgroup {
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero hgroup {
+    margin-top: 30px;
+  }
 }
 
 .hero h1 {
+  display: inline;
   font-family: "BebasLight";
-  font-size: 30px;
+  font-size: 45px;
+  line-height: 50px;
   color: white;
   margin: 35px -15px 40px 0;
 }
@@ -1883,9 +2026,8 @@ These are shared between the project and case study list pages.
   }
 }
 
-.hero h1 .soft {
-  margin: 0 -10px;
-  color: rgba(156, 156, 156, 0.4);
+.hero h1.soft {
+  color: rgba(156, 156, 156, 0.5);
 }
 
 .hero h3 {
@@ -1911,20 +2053,7 @@ These are shared between the project and case study list pages.
 .contact textarea {
   width: 100%;
   height: 40px;
-}
-
-@media only screen and (min-width: 0) and (max-width: 530px) {
-  .contact input,
-  .contact textarea {
-    margin-top: 10px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 899px) {
-  .contact input,
-  .contact textarea {
-    margin-top: 10px;
-  }
+  margin-top: 10px;
 }
 
 @media only screen and (min-width: 900px) and (max-width: 9999px) {
@@ -1934,6 +2063,10 @@ These are shared between the project and case study list pages.
   }
 }
 
+.contact h2 {
+  margin-bottom: 10px;
+}
+
 .contact textarea {
   height: 90px;
 }
@@ -1941,6 +2074,16 @@ These are shared between the project and case study list pages.
 .contact .button {
   padding: 13px 0 8px 0;
   margin-top: 20px;
+}
+
+/* Main footer styles */
+main + footer .logo {
+  padding-top: 40px;
+}
+
+main + footer h2 {
+  margin-bottom: 0;
+  padding-bottom: 30px;
 }
 
 .presence {
@@ -1953,6 +2096,7 @@ These are shared between the project and case study list pages.
 }
 
 .presence .title a {
+  margin-top: .3em;
   float: right;
 }
 
@@ -1992,17 +2136,41 @@ These are shared between the project and case study list pages.
 
 .project-links .project-link {
   display: inline-block;
-  width: 10em;
-  margin-right: 1em;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.project-links .project-link:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .project-links .project-link {
+    margin-top: 0;
+    margin-right: 1em;
+    width: 10em;
+  }
+}
+
+.project-links .project-link a {
+  padding: 0.4em 0.5em 0.2em 0.5em;
 }
 
 .gallery-image {
   text-align: center;
+  margin: 2em auto 1.5em auto;
 }
 
 .gallery-image img {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6);
   margin: 0 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.gallery-image figcaption {
+  margin-top: 1em;
+  font-size: 15px;
 }
 
 .back-nav {
@@ -2011,7 +2179,7 @@ These are shared between the project and case study list pages.
 }
 
 .back-nav p {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0 10px;
 }
 
 .project-title {
@@ -2054,6 +2222,87 @@ These are shared between the project and case study list pages.
 .skill-items {
   list-style-type: none;
   padding-left: 0;
+}
+
+.rslides .project-list-item {
+  height: 670px;
+}
+
+@media only screen and (min-width: 768px) {
+  .rslides .project-list-item {
+    height: 420px;
+  }
+}
+
+.slide-controls {
+  position: relative;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.slide-controls .rslides_tabs {
+  list-style-type: none;
+  padding-left: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+.slide-controls .rslides_tabs li {
+  display: inline-block;
+  margin: 13px 10px 0 10px;
+}
+
+.slide-controls .rslides_tabs li a {
+  text-indent: -9999px;
+  background: url(/images/showcase/status.svg) no-repeat;
+  height: 10px;
+  width: 58px;
+  display: inline-block;
+  opacity: 0.3;
+}
+
+.slide-controls .rslides_tabs li a:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.slide-controls .rslides_tabs li.rslides_here a {
+  opacity: 0.75;
+}
+
+.slide-controls .rslides_nav.prev {
+  position: absolute;
+  left: 0;
+  text-indent: -9999px;
+  opacity: 0.3;
+  width: 30px;
+  height: 40px;
+  background: url(/images/showcase/previous.svg) no-repeat;
+}
+
+.slide-controls .rslides_nav.prev:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.slide-controls .rslides_nav.next {
+  position: absolute;
+  right: 0;
+  text-indent: -9999px;
+  opacity: 0.3;
+  width: 30px;
+  height: 40px;
+  background: url(/images/showcase/next.svg) no-repeat;
+}
+
+.slide-controls .rslides_nav.next:hover {
+  opacity: 0.75;
+  cursor: pointer;
 }
 
 body {

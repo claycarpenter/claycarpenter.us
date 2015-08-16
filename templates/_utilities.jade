@@ -45,9 +45,12 @@ mixin dynContent(items)
       when 'image'
         figure.gallery-image
           img(
-            src=item._content.imgSrc
-            title=item._content.title
+            src=image.imgSrc
+            title=image.title
+            width=image.width
+            height=image.height
           )
+          figcaption= item._content.caption
       
       when 'imageSet'
         figure.gallery-image
@@ -55,7 +58,10 @@ mixin dynContent(items)
             img(
               src=image.imgSrc
               title=image.title
+              width=image.width
+              height=image.height
             )
+          figcaption= item._content.caption
             
       when 'dyn'
         div !{ item.content }

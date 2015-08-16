@@ -57,6 +57,15 @@ process:
 
         p For a logo design, I chose sea stacks. Dotting the park’s Pacific coast, these large rocky formations jut out of the water in dramatic fashion and are among the park’s most unique features. I developed two different sizes of logo: one large, with details showing the rocky texture of the sea stacks. The other logo was simplified, designed to work in smaller sizes or wherever low fidelity was necessary, such as print or apparel.
 
+    - _type: imageSet
+      _content:
+        caption: Sea stacks and the logo they inspired.
+        items:
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
+            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
+              title: 'An image'
+
     - _type: dyn
       _lang: jade
       _content: |

@@ -10,7 +10,7 @@ navPage: Projects
 # Page Content
 
 listImage:
-  imgSrc: /projects/olympic-park/thumb.jpg
+  imgSrc: /projects/olympic-park/images/thumb.jpg
 
 skillIcons:
   - shortName: ux

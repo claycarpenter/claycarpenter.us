@@ -19,9 +19,6 @@ skillIcons:
 
 projectLinks:
   items:
-    - name: Gallery
-      href: '#gallery'
-
     - name: View Live
       href: http://claycarpenter.github.io/olympic-park/
 
@@ -30,7 +27,7 @@ projectLinks:
 
 intro:
   blurb: |
-    Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
+    Highlighting the many camping opportunities offered by Olympic National Park, this showcase shows visitors where and how they can stay in the park to experience the pristine northwest wilderness.
 
 toolsAndTechniques:
   categories:
@@ -42,43 +39,41 @@ toolsAndTechniques:
       skills:
         - name: Logo Creation
         - name: Responsive Web Design
-    - name: Languages
+    - name: Front End
       skills:
         - name: HTML
         - name: CSS
         - name: JavaScript
-    - name: Frameworks
-      skills:
         - name: jQuery
+    - name: Back End
+      skills:
+        - name: Gulp
+        - name: Sass
+        - name: Jade
 
 details:
   items:
-    # Paragraph
-    - _type: paragraph
-      _content: |
-        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
-
-    # Single image
-    - _type: image
-      _content:
-        imgSrc: 'http://loremflickr.com/320/240/dog'
-        title: 'An image'
-
-    # Paragraph
-    - _type: paragraph
-      _content: |
-        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
-
-
-    # Paragraph
-    - _type: paragraph
-      _content: |
-        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
-
-    # Paragraph
+    # Focus on solutions!
     - _type: dyn
       _lang: jade
       _content: |
-        img(src='http://lorempixel.com/g/400/200/nature', title=title)
+        h4 Background
+
+        p This was a sample project in my Bloc UX Design course. I was asked to select a product to showcase in a single page site. I selected Olympic National Park because I believed it was a real product with a lot to offer, a large collection of royalty-free images to draw from, and no chance that I'd step on the toes of an established brand. After some more research, I narrowed the focus down further to just camping at Olympic National Park.
+
+        h4 Design
+
+        p The final design is a simple, retro style. Taking the elements surrounding camping literally by painting the page in earth tones like a strong dark green and light tan. Almost every color on the page is a variation on those two base colors. For highlights, especially in the CTA sections, a bright burnt orange is used to draw the user's attention.
+
+        p The entire page was designed to be responsive. Most sections rely on a two-column layout, which is presented in desktop and tablet widths. For mobile widths, the two columns are stacked vertically into a single column. The exception to this two-column layout is the campgrounds section, which employs a card layout. Each campground within the park is represented by its own card, showing a picture of the campground and select campground details and amenities. Those cards are presented in rows of 3 for desktop widths, 2 for tablet widths, and 1 for mobile widths.
+
+        h4 Development
+
+        p This was the first time I'd been able to use Gulp, Jade, and Sass for anything larger than small toy projects. Using the three together, along with browser-sync, created an impressively efficient developer workflow.
+
+        p For the front end, I built a very simple responsive grid system from scratch. I felt like building my own grid framework would give me better insights into responsive web development than relying upon an established system like Bootstrap or Foundation. My implementation started life as a copy of Chris Coyier's #[a(href='https://css-tricks.com/dont-overthink-it-grids/') Don&#39;t Overthink It Grids], which I then expanded to include some Bootstrap-like functionality.
+
+        p In-page navigation is provided with a very simple fixed nav header. Following conventional design patterns, that nav header collapses into a hamburger menu for mobile widths.
+
 
 # Stop cutting my file short

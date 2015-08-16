@@ -12,15 +12,16 @@ block content
   
   .project-title.col-8-10-pad.theme-d
     h2= title
-    
-  section.col-8-10-pad.theme-b
-    ul.project-links
-      each link in projectLinks.items
-        li.project-link
-          a.button(
-            href=link.href
-            title=link.name
-          )= link.name
+  
+  if projectLinks.items && projectLinks.items.length
+    section.col-8-10-pad.theme-b
+      ul.project-links
+        each link in projectLinks.items
+          li.project-link
+            a.button(
+              href=link.href
+              title=link.name
+            )= link.name
           
   section.col-8-10-pad.theme-b
     h3 Intro

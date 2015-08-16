@@ -19,6 +19,9 @@ skillIcons:
 
 projectLinks:
   items:
+    - name: Case Study
+      href: /case-studies/olympic-park/
+      
     - name: View Live
       href: http://claycarpenter.github.io/olympic-park/
 

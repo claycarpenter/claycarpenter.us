@@ -61,10 +61,12 @@ process:
       _content:
         caption: Sea stacks and the logo they inspired.
         items:
-            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-              title: 'An image'
-            - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-              title: 'An image'
+            - imgSrc: '/case-studies/olympic-park/images/sea-stacks.jpg'
+              title: 'Sea stacks'
+              width: 300
+            - imgSrc: '/case-studies/olympic-park/images/logo.jpg'
+              title: 'Olympic National Park logo'
+              width: 200
 
     - _type: dyn
       _lang: jade
@@ -73,11 +75,36 @@ process:
 
         p The design moved through four iterations. Along the way it progressed from an attractive but too-sterile presentation, through a couple layout changes, and then to the final style. The design has an overall retro feel. Earth tones dominate the page, including a strong dark green and a neutral tan. Bright orange is used for attracting the user’s attention, such as for CTAs. Striped fonts form a 3D effect on major headers that adds vigor to the page without straying from the retro theme.
 
+    - _type: imageSet
+      _content:
+        caption: Two early iterations, captured in style tiles.
+        items:
+            - imgSrc: '/case-studies/olympic-park/images/early-design/sea-stacks.jpg'
+              title: 'Sea stacks design'
+              width: 250
+            - imgSrc: '/case-studies/olympic-park/images/early-design/mountains.jpg'
+              title: 'Mountains design'
+              width: 250
+
     - _type: dyn
       _lang: jade
       _content: |
         h4 Build
 
         p The website was built as a single, responsive page. Following conventional UI patterns, I implemented a fixed header that scrolls with the user to provide in-page navigation. In tablet and wider views, all navigation options are present by default. In mobile views, the navigation options are hidden initially and visible after the user opens a nav menu (through a typical hamburger icon). Much of the content is presented in two columns, and those same sections are collapsed into a single column in mobile views. The campgrounds are shown using a card UI pattern, allowing the number of campgrounds shown in one row to scale based on the viewport width.
+
+    - _type: imageSet
+      _content:
+        caption: The final implementation, in desktop, tablet, and mobile widths.
+        items:
+            - imgSrc: '/case-studies/olympic-park/images/final-design/desktop.jpg'
+              title: 'Desktop'
+              width: 200
+            - imgSrc: '/case-studies/olympic-park/images/final-design/tablet.jpg'
+              title: 'Table'
+              width: 150
+            - imgSrc: '/case-studies/olympic-park/images/final-design/mobile.jpg'
+              title: 'Mobile'
+              width: 100
 
 # Stop cutting my file short

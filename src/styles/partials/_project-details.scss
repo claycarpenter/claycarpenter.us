@@ -59,10 +59,14 @@
 
 .gallery-image {
   text-align: center;
+  margin: 2em auto 1.5em auto;
 
   img {
     box-shadow: 0 2px 6px 0 hsla(0, 0, 0, .6);
     margin: 0 15px;
+
+    display: inline-block;
+    vertical-align: top;
   }
 
   figcaption {

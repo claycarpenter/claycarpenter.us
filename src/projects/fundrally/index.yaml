@@ -19,70 +19,45 @@ skillIcons:
 projectLinks:
   items:
     - name: Case Study
-      href: /case-studies/olympic-park/
+      href: /case-studies/fundrally/
 
 intro:
   blurb: |
-    Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
+    FundRally is a conceptual design for a crowdsourced fundraising platform. FundRally is designed to be a platform for established charities to launch digital fundraising drives for specific projects.
 
 toolsAndTechniques:
   categories:
     - name: Design Tools
       skills:
         - name: Sketch
-        - name: Illustrator
-    - name: Design Techniques
+
+    - name: User Experience
       skills:
-        - name: Logo Creation
-        - name: Responsive Web Design
-    - name: Languages
+        - name: User surveys
+        - name: A/B testing
+
+    - name: Business Analyst
       skills:
-        - name: HTML
-        - name: CSS
-        - name: JavaScript
-    - name: Frameworks
-      skills:
-        - name: jQuery
+        - name: Concept definition
+        - name: Competition research
+        - name: User stories
 
 details:
   items:
-    # Paragraph
-    - _type: paragraph
-      _content: |
-        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
-
-    # Single image
-    - _type: image
-      _content:
-        imgSrc: 'http://lorempixel.com/g/400/200/nature'
-        title: 'An image'
-
-    # Paragraph
-    - _type: paragraph
-      _content: |
-        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
-
-    # Single image
-    - _type: imageSet
-      _content:
-        items:
-          - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-            title: 'An image'
-          - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-            title: 'An image'
-          - imgSrc: 'http://lorempixel.com/g/170/300/nature'
-            title: 'An image'
-
-    # Paragraph
-    - _type: paragraph
-      _content: |
-        Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
-
-    # Paragraph
+    # Focus on solutions!
     - _type: dyn
       _lang: jade
       _content: |
-        figure.gallery-image.single
-          img(src='http://lorempixel.com/g/400/200/nature', title=title)
+        h4 Background
+
+        p This was a sample project in my Bloc UX Design course. The assignment included developing a design for a fundraiser site along the lines of Kickstarter or IndieGoGo.
+
+        h4 Business Analysis
+
+        p While the assignment specified that the design was intended to be a community fundraiser site, it left the specifics undefined. I decided to fill in the details with my own concrete vision for the site. Once the site's vision was documented, I wrote collections of user stories to build a fine-grained defintion of what would need to be designed and built to see that vision realized.
+
+        h4 Design
+
+        p The final design was inspired by Google's Material Design, as well as InVision's excellent style. Dark charcoal gray headers sit atop white content areas. Navigation links are muted in the dark header, while the content pops in contrast. The site leans heavily on the dark gray and white monochrome scheme, but relies on pink and dark red to add accents and draw users' attention to specific areas and points of interactivity.
 
 # Stop cutting my file short

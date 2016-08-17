@@ -56,7 +56,7 @@ showcases:
         blurb: |
           Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows. Recognition Action Against Hunger, harness public sector, safety global leaders.
       listImage:
-        imgSrc: /projects/olympic-park/thumb.jpg
+        imgSrc: /projects/olympic-park/images/thumb.jpg
 
     - title: FundRally
       filename: projects/fundrally/index.html
@@ -64,4 +64,4 @@ showcases:
         blurb: |
           Recognition Action Against Hunger, harness public sector, safety global leaders. Transform the world breakthrough insights, Aga Khan our ambitions social impact plumpy'nut fellows.
       listImage:
-        imgSrc: /projects/fundrally/thumb.jpg
+        imgSrc: /projects/fundrally/images/thumb.jpg

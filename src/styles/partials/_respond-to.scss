@@ -1,4 +1,8 @@
 @mixin respond-to($media, $isSpecific: false) {
+  // Apparently default values are required?
+  $min-width: 0;
+  $max-width: $break-sm;
+
   // Create min width
   @if $media == small {
     $min-width: 0;
@@ -11,9 +15,6 @@
   @else if $media == large {
     $min-width: $break-lg;
     $max-width: 9999px;
-  }
-  @else {
-
   }
 
   // If isSpecific, set max width query
